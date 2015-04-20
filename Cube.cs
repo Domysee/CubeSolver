@@ -81,7 +81,12 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBackCW()
 		{
-
+			var tempRow = top.GetRow(1);
+			top.SetRow(1, right.GetColumn(3));
+			right.SetColumn(3, bottom.GetRow(3));
+			bottom.SetRow(3, left.GetColumn(1));
+			left.SetColumn(1, tempRow);
+			back.RotateCW();
 		}
 
 		public void RotateBackCCW()
