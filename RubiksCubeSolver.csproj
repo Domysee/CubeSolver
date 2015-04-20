@@ -55,8 +55,10 @@
     </ApplicationDefinition>
     <Compile Include="CubeRandomizer.cs" />
     <Compile Include="HumanCubeSolver3x3.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Matrix.cs" />
     <Compile Include="Side.cs" />
+    <Compile Include="ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -65,7 +67,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Color.cs" />
     <Compile Include="Cube.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
