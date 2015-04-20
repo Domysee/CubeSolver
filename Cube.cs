@@ -55,6 +55,23 @@ namespace RubiksCubeSolver
 			bottom = new Side(Color.Yellow);
 		}
 
+		/// <summary>
+		/// for the turns, the sides are rotated to the front
+		/// the y-axis points upwards, the x-axis to the right and the z-axis backwards
+		/// for the left side, the cube is turned 90 degrees counterclockwise around the y-axis
+		/// for the right side, the cube is turned 90 degrees clockwise around the y-axis
+		/// for the top side, the cube is turned 90 degrees counterclockwise around the x-axis
+		/// for the bottom side, the cube is turned 90 degrees clockwise around the x-axis
+		/// for the back side, the cube is turned 180 degrees around the x-axis
+		/// 
+		/// the notations in the method are marked according to this page: 
+		/// https://rubiks.com/uploads/general_content/Rubiks_cube_3x3_solution-en.pdf
+		/// </summary>
+
+
+		/// <summary>
+		/// F
+		/// </summary>
 		public void RotateFrontCW()
 		{
 			var tempRow = top.GetRow(3);
@@ -65,6 +82,9 @@ namespace RubiksCubeSolver
 			front.RotateCW();
 		}
 
+		/// <summary>
+		/// Fi
+		/// </summary>
 		public void RotateFrontCCW()
 		{
 			var tempRow = top.GetRow(3);
@@ -76,8 +96,7 @@ namespace RubiksCubeSolver
 		}
 
 		/// <summary>
-		/// acts as the cube was turned 180 degree around the y axis (pointing upwards)
-		/// then the back is the front, clockwise rotation is treated the same as it were the front
+		/// B
 		/// </summary>
 		public void RotateBackCW()
 		{
@@ -89,6 +108,9 @@ namespace RubiksCubeSolver
 			back.RotateCW();
 		}
 
+		/// <summary>
+		/// Bi
+		/// </summary>
 		public void RotateBackCCW()
 		{
 			var tempRow = top.GetRow(1);
@@ -99,6 +121,9 @@ namespace RubiksCubeSolver
 			back.RotateCCW();
 		}
 
+		/// <summary>
+		/// L
+		/// </summary>
 		public void RotateLeftCW()
 		{
 			var tempColumn = top.GetColumn(1);
@@ -109,6 +134,9 @@ namespace RubiksCubeSolver
 			left.RotateCW();
 		}
 
+		/// <summary>
+		/// Li
+		/// </summary>
 		public void RotateLeftCCW()
 		{
 			var tempColumn = top.GetColumn(1);
@@ -119,6 +147,9 @@ namespace RubiksCubeSolver
 			left.RotateCCW();
 		}
 
+		/// <summary>
+		/// R
+		/// </summary>
 		public void RotateRightCW()
 		{
 			var tempColumn = top.GetColumn(3);
@@ -129,6 +160,9 @@ namespace RubiksCubeSolver
 			right.RotateCW();
 		}
 
+		/// <summary>
+		/// Ri
+		/// </summary>
 		public void RotateRightCCW()
 		{
 			var tempColumn = top.GetColumn(3);
@@ -139,6 +173,9 @@ namespace RubiksCubeSolver
 			right.RotateCCW();
 		}
 
+		/// <summary>
+		/// U
+		/// </summary>
 		public void RotateTopCW()
 		{
 			var tempRow = front.GetRow(1);
@@ -149,6 +186,9 @@ namespace RubiksCubeSolver
 			top.RotateCW();
 		}
 
+		/// <summary>
+		/// Ui
+		/// </summary>
 		public void RotateTopCCW()
 		{
 			var tempRow = front.GetRow(1);
@@ -159,6 +199,9 @@ namespace RubiksCubeSolver
 			top.RotateCW();
 		}
 
+		/// <summary>
+		/// D
+		/// </summary>
 		public void RotateBottomCW()
 		{
 			var tempRow = front.GetRow(3);
@@ -169,6 +212,9 @@ namespace RubiksCubeSolver
 			bottom.RotateCW();
 		}
 
+		/// <summary>
+		/// Di
+		/// </summary>
 		public void RotateBottomCCW()
 		{
 			var tempRow = front.GetRow(3);
