@@ -75,11 +75,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateFrontCW()
 		{
-			var tempRow = top.GetRow(3);
-			top.SetRow(3, left.GetColumn(1));
-			left.SetColumn(1, bottom.GetRow(1));
-			bottom.SetRow(1, right.GetColumn(3));
-			right.SetColumn(3, tempRow);
+			var tempRow = top.GetRow(2);
+			top.SetRow(2, left.GetColumn(0));
+			left.SetColumn(0, bottom.GetRow(0));
+			bottom.SetRow(0, right.GetColumn(2));
+			right.SetColumn(2, tempRow);
 			front.RotateCW();
 		}
 
@@ -88,11 +88,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateFrontCCW()
 		{
-			var tempRow = top.GetRow(3);
-			top.SetRow(3, right.GetColumn(1));
-			right.SetColumn(1, bottom.GetRow(1));
-			bottom.SetRow(1, left.GetColumn(3));
-			left.SetColumn(3, tempRow);
+			var tempRow = top.GetRow(2);
+			top.SetRow(2, right.GetColumn(0));
+			right.SetColumn(0, bottom.GetRow(0));
+			bottom.SetRow(0, left.GetColumn(2));
+			left.SetColumn(2, tempRow);
 			front.RotateCCW();
 		}
 
@@ -101,11 +101,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBackCW()
 		{
-			var tempRow = top.GetRow(1);
-			top.SetRow(1, right.GetColumn(3));
-			right.SetColumn(3, bottom.GetRow(3));
-			bottom.SetRow(3, left.GetColumn(1));
-			left.SetColumn(1, tempRow);
+			var tempRow = top.GetRow(0);
+			top.SetRow(0, right.GetColumn(2));
+			right.SetColumn(2, bottom.GetRow(2));
+			bottom.SetRow(2, left.GetColumn(0));
+			left.SetColumn(0, tempRow);
 			back.RotateCW();
 		}
 
@@ -114,11 +114,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBackCCW()
 		{
-			var tempRow = top.GetRow(1);
-			top.SetRow(1, left.GetColumn(1));
-			left.SetColumn(1, bottom.GetRow(3));
-			bottom.SetRow(3, right.GetColumn(3));
-			right.SetColumn(3, tempRow);
+			var tempRow = top.GetRow(0);
+			top.SetRow(0, left.GetColumn(0));
+			left.SetColumn(0, bottom.GetRow(2));
+			bottom.SetRow(2, right.GetColumn(2));
+			right.SetColumn(2, tempRow);
 			back.RotateCCW();
 		}
 
@@ -127,11 +127,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateLeftCW()
 		{
-			var tempColumn = top.GetColumn(1);
-			top.SetColumn(1, back.GetColumn(1));
-			back.SetColumn(1, bottom.GetColumn(1));
-			bottom.SetColumn(1, front.GetColumn(1));
-			front.SetColumn(1, tempColumn);
+			var tempColumn = top.GetColumn(0);
+			top.SetColumn(0, back.GetColumn(0));
+			back.SetColumn(0, bottom.GetColumn(0));
+			bottom.SetColumn(0, front.GetColumn(0));
+			front.SetColumn(0, tempColumn);
 			left.RotateCW();
 		}
 
@@ -140,11 +140,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateLeftCCW()
 		{
-			var tempColumn = top.GetColumn(1);
-			top.SetColumn(1, front.GetColumn(1));
-			front.SetColumn(1, bottom.GetColumn(1));
-			bottom.SetColumn(1, back.GetColumn(1));
-			back.SetColumn(1, tempColumn);
+			var tempColumn = top.GetColumn(0);
+			top.SetColumn(0, front.GetColumn(0));
+			front.SetColumn(0, bottom.GetColumn(0));
+			bottom.SetColumn(0, back.GetColumn(0));
+			back.SetColumn(0, tempColumn);
 			left.RotateCCW();
 		}
 
@@ -153,11 +153,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateRightCW()
 		{
-			var tempColumn = top.GetColumn(3);
-			top.SetColumn(3, front.GetColumn(3));
-			front.SetColumn(3, bottom.GetColumn(3));
-			bottom.SetColumn(3, back.GetColumn(3));
-			back.SetColumn(3, tempColumn);
+			var tempColumn = top.GetColumn(2);
+			top.SetColumn(2, front.GetColumn(2));
+			front.SetColumn(2, bottom.GetColumn(2));
+			bottom.SetColumn(2, back.GetColumn(2));
+			back.SetColumn(2, tempColumn);
 			right.RotateCW();
 		}
 
@@ -166,11 +166,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateRightCCW()
 		{
-			var tempColumn = top.GetColumn(3);
-			top.SetColumn(3, back.GetColumn(3));
-			back.SetColumn(3, bottom.GetColumn(3));
-			bottom.SetColumn(3, front.GetColumn(3));
-			front.SetColumn(3, tempColumn);
+			var tempColumn = top.GetColumn(2);
+			top.SetColumn(2, back.GetColumn(2));
+			back.SetColumn(2, bottom.GetColumn(2));
+			bottom.SetColumn(2, front.GetColumn(2));
+			front.SetColumn(2, tempColumn);
 			right.RotateCCW();
 		}
 
@@ -179,11 +179,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateTopCW()
 		{
-			var tempRow = front.GetRow(1);
-			front.SetRow(1, right.GetRow(1));
-			right.SetRow(1, back.GetRow(3));
-			back.SetRow(3, left.GetRow(1));
-			left.SetRow(1, tempRow);
+			var tempRow = front.GetRow(0);
+			front.SetRow(0, right.GetRow(0));
+			right.SetRow(0, back.GetRow(2));
+			back.SetRow(2, left.GetRow(0));
+			left.SetRow(0, tempRow);
 			top.RotateCW();
 		}
 
@@ -192,11 +192,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateTopCCW()
 		{
-			var tempRow = front.GetRow(1);
-			front.SetRow(1, left.GetRow(1));
-			left.SetRow(1, back.GetRow(3));
-			back.SetRow(3, right.GetRow(1));
-			right.SetRow(1, tempRow);
+			var tempRow = front.GetRow(0);
+			front.SetRow(0, left.GetRow(0));
+			left.SetRow(0, back.GetRow(2));
+			back.SetRow(2, right.GetRow(0));
+			right.SetRow(0, tempRow);
 			top.RotateCW();
 		}
 
@@ -205,11 +205,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBottomCW()
 		{
-			var tempRow = front.GetRow(3);
-			front.SetRow(3, left.GetRow(3));
-			left.SetRow(3, back.GetRow(1));
-			back.SetRow(1, right.GetRow(3));
-			right.SetRow(3, tempRow);
+			var tempRow = front.GetRow(2);
+			front.SetRow(2, left.GetRow(2));
+			left.SetRow(2, back.GetRow(0));
+			back.SetRow(0, right.GetRow(2));
+			right.SetRow(2, tempRow);
 			bottom.RotateCW();
 		}
 
@@ -218,11 +218,11 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBottomCCW()
 		{
-			var tempRow = front.GetRow(3);
-			front.SetRow(3, right.GetRow(3));
-			right.SetRow(3, back.GetRow(1));
-			back.SetRow(1, left.GetRow(3));
-			left.SetRow(3, tempRow);
+			var tempRow = front.GetRow(2);
+			front.SetRow(2, right.GetRow(2));
+			right.SetRow(2, back.GetRow(0));
+			back.SetRow(0, left.GetRow(2));
+			left.SetRow(2, tempRow);
 			bottom.RotateCCW();
 		}
 	}
