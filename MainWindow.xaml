@@ -247,7 +247,116 @@
                                 </GeometryModel3D>
                             </Model3DGroup>
 
-                            
+                            <Model3DGroup>
+                                <GeometryModel3D x:Name="Left00">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-0.9,-2.9 -0.1,-0.1,-2.9 -0.1,-0.9,-2.1 -0.1,-0.1,-2.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left01">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-0.9,-1.9 -0.1,-0.1,-1.9 -0.1,-0.9,-1.1 -0.1,-0.1,-1.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left02">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-0.9,-0.9 -0.1,-0.1,-0.9 -0.1,-0.9,-0.1 -0.1,-0.1,-0.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left10">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-1.9,-2.9 -0.1,-1.1,-2.9 -0.1,-1.9,-2.1 -0.1,-1.1,-2.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left11">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-1.9,-1.9 -0.1,-1.1,-1.9 -0.1,-1.9,-1.1 -0.1,-1.1,-1.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left12">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-1.9,-0.9 -0.1,-1.1,-0.9 -0.1,-1.9,-0.1 -0.1,-1.1,-0.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left20">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-2.9,-2.9 -0.1,-2.1,-2.9 -0.1,-2.9,-2.1 -0.1,-2.1,-2.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left21">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-2.9,-1.9 -0.1,-2.1,-1.9 -0.1,-2.9,-1.1 -0.1,-2.1,-1.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                                <GeometryModel3D x:Name="Left22">
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.Material>
+                                    <GeometryModel3D.BackMaterial>
+                                        <DiffuseMaterial Brush="Orange" />
+                                    </GeometryModel3D.BackMaterial>
+
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D Positions="-0.1,-2.9,-0.9 -0.1,-2.1,-0.9 -0.1,-2.9,-0.1 -0.1,-2.1,-0.1" TriangleIndices="0 1 2 1 2 3" />
+                                    </GeometryModel3D.Geometry>
+                                </GeometryModel3D>
+                            </Model3DGroup>
                         </Model3DGroup>
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
