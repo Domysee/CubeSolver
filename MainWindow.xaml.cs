@@ -20,9 +20,14 @@ namespace RubiksCubeSolver
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		MainWindowViewModel viewmodel;
+
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			viewmodel = new MainWindowViewModel();
+			this.DataContext = viewmodel;
 		}
 	}
 }

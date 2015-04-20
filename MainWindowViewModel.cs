@@ -282,5 +282,10 @@ namespace RubiksCubeSolver
 			get { return cube.Bottom.Fields[2, 2]; }
 		}
 		#endregion
+
+		public MainWindowViewModel()
+		{
+			cube = new Cube();
+		}
 	}
 }
