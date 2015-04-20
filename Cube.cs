@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace RubiksCubeSolver
 {
@@ -47,12 +48,12 @@ namespace RubiksCubeSolver
 
 		public Cube()
 		{
-			front = new Side(Color.Blue);
-			back = new Side(Color.Green);
-			left = new Side(Color.Red);
-			right = new Side(Color.Orange);
-			top = new Side(Color.White);
-			bottom = new Side(Color.Yellow);
+			front = new Side(Brushes.Blue);
+			back = new Side(Brushes.Green);
+			left = new Side(Brushes.Red);
+			right = new Side(Brushes.Orange);
+			top = new Side(Brushes.White);
+			bottom = new Side(Brushes.Yellow);
 		}
 
 		/// <summary>

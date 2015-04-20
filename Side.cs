@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace RubiksCubeSolver
 {
@@ -14,16 +15,16 @@ namespace RubiksCubeSolver
 		/// <summary>
 		/// row is the first index, column the second
 		/// </summary>
-		private Color[,] fields;
-		public Color[,] Fields
+		private Brush[,] fields;
+		public Brush[,] Fields
 		{
 			get { return fields; }
 			set { fields = value; }
 		}
 
-		public Side(Color initializationColor)
+		public Side(Brush initializationColor)
 		{
-			fields = new Color[sideLength, sideLength];
+			fields = new Brush[sideLength, sideLength];
 			for (int i = 0; i < sideLength; i++)
 			{
 				for (int j = 0; j < sideLength; j++)
@@ -33,11 +34,11 @@ namespace RubiksCubeSolver
 			}
 		}
 
-		public Color[] GetRow(int row)
+		public Brush[] GetRow(int row)
 		{
 			Debug.Assert(row >= 0 && row < sideLength);
 
-			var rowColors = new Color[sideLength];
+			var rowColors = new Brush[sideLength];
 			for (int i = 0; i < sideLength; i++)
 			{
 				rowColors[i] = fields[row, i];
@@ -45,11 +46,11 @@ namespace RubiksCubeSolver
 			return rowColors;
 		}
 
-		public Color[] GetColumn(int column)
+		public Brush[] GetColumn(int column)
 		{
 			Debug.Assert(column >= 0 && column < sideLength);
 
-			var columnColors = new Color[sideLength];
+			var columnColors = new Brush[sideLength];
 			for (int i = 0; i < sideLength; i++)
 			{
 				columnColors[i] = fields[i, column];
@@ -57,7 +58,7 @@ namespace RubiksCubeSolver
 			return columnColors;
 		}
 
-		public void SetRow(int row, Color[] rowColors)
+		public void SetRow(int row, Brush[] rowColors)
 		{
 			Debug.Assert(rowColors.Length == sideLength);
 			Debug.Assert(row >= 0 && row < sideLength);
@@ -68,7 +69,7 @@ namespace RubiksCubeSolver
 			}
 		}
 
-		public void SetColumn(int column, Color[] columnColors)
+		public void SetColumn(int column, Brush[] columnColors)
 		{
 			Debug.Assert(columnColors.Length == sideLength);
 			Debug.Assert(column >= 0 && column < sideLength);
@@ -81,7 +82,7 @@ namespace RubiksCubeSolver
 
 		public void RotateCW()
 		{
-			var newFields = new Color[sideLength, sideLength];
+			var newFields = new Brush[sideLength, sideLength];
 			newFields[0, 0] = fields[2, 0];
 			newFields[0, 1] = fields[1, 0];
 			newFields[0, 2] = fields[0, 0];
@@ -96,7 +97,7 @@ namespace RubiksCubeSolver
 
 		public void RotateCCW()
 		{
-			var newFields = new Color[sideLength, sideLength];
+			var newFields = new Brush[sideLength, sideLength];
 			newFields[0, 0] = fields[0, 2];
 			newFields[0, 1] = fields[1, 2];
 			newFields[0, 2] = fields[2, 2];
