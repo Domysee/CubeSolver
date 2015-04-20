@@ -58,16 +58,21 @@ namespace RubiksCubeSolver
 		public void RotateFrontCW()
 		{
 			var tempRow = top.GetRow(3);
-			top.SetRow(3, right.GetColumn(1));
-			right.SetColumn(1, bottom.GetRow(1));
-			bottom.SetRow(1, left.GetColumn(3));
-			left.SetColumn(3, tempRow);
+			top.SetRow(3, left.GetColumn(1));
+			left.SetColumn(1, bottom.GetRow(1));
+			bottom.SetRow(1, right.GetColumn(3));
+			right.SetColumn(3, tempRow);
 			front.RotateCW();
 		}
 
 		public void RotateFrontCCW()
 		{
-
+			var tempRow = top.GetRow(3);
+			top.SetRow(3, right.GetColumn(1));
+			right.SetColumn(1, bottom.GetRow(1));
+			bottom.SetRow(1, left.GetColumn(3));
+			left.SetColumn(3, tempRow);
+			front.RotateCCW();
 		}
 
 		/// <summary>
