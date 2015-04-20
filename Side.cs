@@ -82,12 +82,31 @@ namespace RubiksCubeSolver
 		public void RotateCW()
 		{
 			var newFields = new Color[sideLength, sideLength];
-
+			newFields[0, 0] = fields[2, 0];
+			newFields[0, 1] = fields[1, 0];
+			newFields[0, 2] = fields[0, 0];
+			newFields[1, 0] = fields[2, 1];
+			newFields[1, 1] = fields[1, 1];
+			newFields[1, 2] = fields[0, 1];
+			newFields[2, 0] = fields[2, 2];
+			newFields[2, 1] = fields[1, 2];
+			newFields[2, 2] = fields[0, 2];
+			fields = newFields;
 		}
 
 		public void RotateCCW()
 		{
-
+			var newFields = new Color[sideLength, sideLength];
+			newFields[0, 0] = fields[0, 2];
+			newFields[0, 1] = fields[1, 2];
+			newFields[0, 2] = fields[2, 2];
+			newFields[1, 0] = fields[0, 1];
+			newFields[1, 1] = fields[1, 1];
+			newFields[1, 2] = fields[2, 1];
+			newFields[2, 0] = fields[0, 0];
+			newFields[2, 1] = fields[1, 0];
+			newFields[2, 2] = fields[2, 0];
+			fields = newFields;
 		}
 	}
 }
