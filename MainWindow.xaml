@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525" Background="Black">
     <Grid>
+        <Button Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">Do Action</Button>
         <Viewport3D>
             <Viewport3D.Camera>
                 <OrthographicCamera Position="-5 5 5" LookDirection="5 -5 -5" Width="10" />

@@ -18,7 +18,7 @@ namespace RubiksCubeSolver
 				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 		}
 
-		protected void raiseAllPropertiesChanged()
+		public void raiseAllPropertiesChanged()
 		{
 			foreach (PropertyInfo property in this.GetType().GetProperties())
 			{

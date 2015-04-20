@@ -9,7 +9,7 @@ namespace RubiksCubeSolver
 {
 	public class MainWindowViewModel : ViewModelBase
 	{
-		private Cube cube;
+		public Cube cube;
 
 		#region Properties
 		public Brush Front00
