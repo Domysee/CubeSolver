@@ -374,6 +374,7 @@ namespace RubiksCubeSolver
 		public MainWindowViewModel()
 		{
 			cube = new Cube();
+			initializeCommands();
 		}
 
 		private void initializeCommands()
