@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace RubiksCubeSolver
@@ -283,9 +284,160 @@ namespace RubiksCubeSolver
 		}
 		#endregion
 
+		#region Commands
+		private RelayCommand actionU;
+
+		public RelayCommand ActionU
+		{
+			get { return actionU; }
+			set { actionU = value; }
+		}
+		private RelayCommand actionUi;
+
+		public RelayCommand ActionUi
+		{
+			get { return actionUi; }
+			set { actionUi = value; }
+		}
+		private RelayCommand actionD;
+
+		public RelayCommand ActionD
+		{
+			get { return actionD; }
+			set { actionD = value; }
+		}
+		private RelayCommand actionDi;
+
+		public RelayCommand ActionDi
+		{
+			get { return actionDi; }
+			set { actionDi = value; }
+		}
+		private RelayCommand actionL;
+
+		public RelayCommand ActionL
+		{
+			get { return actionL; }
+			set { actionL = value; }
+		}
+		private RelayCommand actionLi;
+
+		public RelayCommand ActionLi
+		{
+			get { return actionLi; }
+			set { actionLi = value; }
+		}
+		private RelayCommand actionR;
+
+		public RelayCommand ActionR
+		{
+			get { return actionR; }
+			set { actionR = value; }
+		}
+		private RelayCommand actionRi;
+
+		public RelayCommand ActionRi
+		{
+			get { return actionRi; }
+			set { actionRi = value; }
+		}
+		private RelayCommand actionF;
+
+		public RelayCommand ActionF
+		{
+			get { return actionF; }
+			set { actionF = value; }
+		}
+		private RelayCommand actionFi;
+
+		public RelayCommand ActionFi
+		{
+			get { return actionFi; }
+			set { actionFi = value; }
+		}
+		private RelayCommand actionB;
+
+		public RelayCommand ActionB
+		{
+			get { return actionB; }
+			set { actionB = value; }
+		}
+		private RelayCommand actionBi;
+
+		public RelayCommand ActionBi
+		{
+			get { return actionBi; }
+			set { actionBi = value; }
+		}
+		#endregion
+
 		public MainWindowViewModel()
 		{
 			cube = new Cube();
+		}
+
+		private void initializeCommands()
+		{
+			actionB = new RelayCommand((param) =>
+			{
+				cube.RotateBackCW();
+				raiseAllPropertiesChanged();
+			});
+			actionBi = new RelayCommand((param) =>
+			{
+				cube.RotateBackCCW();
+				raiseAllPropertiesChanged();
+			});
+			actionF = new RelayCommand((param) =>
+			{
+				cube.RotateFrontCW();
+				raiseAllPropertiesChanged();
+			});
+			actionFi = new RelayCommand((param) =>
+			{
+				cube.RotateFrontCCW();
+				raiseAllPropertiesChanged();
+			});
+			actionL = new RelayCommand((param) =>
+			{
+				cube.RotateLeftCW();
+				raiseAllPropertiesChanged();
+			});
+			actionLi = new RelayCommand((param) =>
+			{
+				cube.RotateLeftCCW();
+				raiseAllPropertiesChanged();
+			});
+			actionR = new RelayCommand((param) =>
+			{
+				cube.RotateRightCW();
+				raiseAllPropertiesChanged();
+			});
+			actionRi = new RelayCommand((param) =>
+			{
+				cube.RotateRightCCW();
+				raiseAllPropertiesChanged();
+			});
+			actionU = new RelayCommand((param) =>
+			{
+				cube.RotateTopCW();
+				raiseAllPropertiesChanged();
+			});
+			actionUi = new RelayCommand((param) =>
+			{
+				cube.RotateTopCCW();
+				raiseAllPropertiesChanged();
+			});
+			actionD = new RelayCommand((param) =>
+			{
+				cube.RotateBottomCW();
+				raiseAllPropertiesChanged();
+			});
+			actionDi = new RelayCommand((param) =>
+			{
+				cube.RotateBottomCCW();
+				raiseAllPropertiesChanged();
+			});
 		}
 	}
 }

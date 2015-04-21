@@ -3,7 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525" Background="Black">
     <Grid>
-        <Button Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">Do Action</Button>
+        <StackPanel>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionL}">L</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionLi}">Li</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionR}">R</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionRi}">Ri</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionF}">F</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionFi}">Fi</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionB}">B</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionBi}">Bi</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionU}">U</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionUi}">Ui</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionD}">D</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionDi}">Di</Button>
+        </StackPanel>
         <Viewport3D>
             <Viewport3D.Camera>
                 <OrthographicCamera Position="-5 5 5" LookDirection="5 -5 -5" Width="10" />
