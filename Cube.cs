@@ -73,13 +73,13 @@ namespace RubiksCubeSolver
 		/// <summary>
 		/// F
 		/// </summary>
-		public void RotateFrontCW()
+		public void RotateFrontCW() 
 		{
 			var tempRow = top.GetRow(2);
-			top.SetRow(2, left.GetColumn(0));
-			left.SetColumn(0, bottom.GetRow(0));
-			bottom.SetRow(0, right.GetColumn(2));
-			right.SetColumn(2, tempRow);
+			top.SetRow(2, left.GetColumn(2));
+			left.SetColumn(2, bottom.GetRow(0));
+			bottom.SetRow(0, right.GetColumn(0));
+			right.SetColumn(0, tempRow);
 			front.RotateCW();
 		}
 

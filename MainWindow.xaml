@@ -597,10 +597,10 @@
                             <Model3DGroup>
                                 <GeometryModel3D x:Name="Right02">
                                     <GeometryModel3D.Material>
-                                        <DiffuseMaterial Brush="{Binding Path=Right00}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right02}" />
                                     </GeometryModel3D.Material>
                                     <GeometryModel3D.BackMaterial>
-                                        <DiffuseMaterial Brush="{Binding Path=Right00}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right02}" />
                                     </GeometryModel3D.BackMaterial>
 
                                     <GeometryModel3D.Geometry>
@@ -621,10 +621,10 @@
                                 </GeometryModel3D>
                                 <GeometryModel3D x:Name="Right00">
                                     <GeometryModel3D.Material>
-                                        <DiffuseMaterial Brush="{Binding Path=Right02}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right00}" />
                                     </GeometryModel3D.Material>
                                     <GeometryModel3D.BackMaterial>
-                                        <DiffuseMaterial Brush="{Binding Path=Right02}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right00}" />
                                     </GeometryModel3D.BackMaterial>
 
                                     <GeometryModel3D.Geometry>
@@ -633,10 +633,10 @@
                                 </GeometryModel3D>
                                 <GeometryModel3D x:Name="Right12">
                                     <GeometryModel3D.Material>
-                                        <DiffuseMaterial Brush="{Binding Path=Right10}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right12}" />
                                     </GeometryModel3D.Material>
                                     <GeometryModel3D.BackMaterial>
-                                        <DiffuseMaterial Brush="{Binding Path=Right10}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right12}" />
                                     </GeometryModel3D.BackMaterial>
 
                                     <GeometryModel3D.Geometry>
@@ -657,10 +657,10 @@
                                 </GeometryModel3D>
                                 <GeometryModel3D x:Name="Right10">
                                     <GeometryModel3D.Material>
-                                        <DiffuseMaterial Brush="{Binding Path=Right12}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right10}" />
                                     </GeometryModel3D.Material>
                                     <GeometryModel3D.BackMaterial>
-                                        <DiffuseMaterial Brush="{Binding Path=Right12}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right10}" />
                                     </GeometryModel3D.BackMaterial>
 
                                     <GeometryModel3D.Geometry>
@@ -669,10 +669,10 @@
                                 </GeometryModel3D>
                                 <GeometryModel3D x:Name="Right22">
                                     <GeometryModel3D.Material>
-                                        <DiffuseMaterial Brush="{Binding Path=Right20}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right22}" />
                                     </GeometryModel3D.Material>
                                     <GeometryModel3D.BackMaterial>
-                                        <DiffuseMaterial Brush="{Binding Path=Right20}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right22}" />
                                     </GeometryModel3D.BackMaterial>
 
                                     <GeometryModel3D.Geometry>
@@ -693,10 +693,10 @@
                                 </GeometryModel3D>
                                 <GeometryModel3D x:Name="Right20">
                                     <GeometryModel3D.Material>
-                                        <DiffuseMaterial Brush="{Binding Path=Right22}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right20}" />
                                     </GeometryModel3D.Material>
                                     <GeometryModel3D.BackMaterial>
-                                        <DiffuseMaterial Brush="{Binding Path=Right22}" />
+                                        <DiffuseMaterial Brush="{Binding Path=Right20}" />
                                     </GeometryModel3D.BackMaterial>
 
                                     <GeometryModel3D.Geometry>
