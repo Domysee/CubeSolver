@@ -285,6 +285,13 @@ namespace RubiksCubeSolver
 		#endregion
 
 		#region Commands
+		private RelayCommand randomize;
+
+		public RelayCommand Randomize
+		{
+			get { return randomize; }
+			set { randomize = value; }
+		}
 		private RelayCommand actionU;
 
 		public RelayCommand ActionU
@@ -379,6 +386,11 @@ namespace RubiksCubeSolver
 
 		private void initializeCommands()
 		{
+			randomize = new RelayCommand((param) =>
+			{
+				new CubeRandomizer().DoRandomTurns(cube);
+				raiseAllPropertiesChanged();
+			});
 			actionB = new RelayCommand((param) =>
 			{
 				cube.RotateBackCW();

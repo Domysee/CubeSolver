@@ -16,6 +16,7 @@
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionUi}">Ui</Button>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionD}">D</Button>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionDi}">Di</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=Randomize}">Random</Button>
         </StackPanel>
         <Viewport3D>
             <Viewport3D.Camera>
@@ -25,7 +26,7 @@
             <Viewport3D.Children>
                 <ModelVisual3D>
                     <ModelVisual3D.Content>
-                        <AmbientLight Color="{Binding Path=Back00}" />
+                        <AmbientLight Color="White" />
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
                 <ModelVisual3D>
