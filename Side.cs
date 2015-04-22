@@ -29,10 +29,40 @@ namespace RubiksCubeSolver
 		}
 
 		private Side left;
+
+		public Side Left
+		{
+			get { return left; }
+			set { left = value; }
+		}
 		private Side right;
+
+		public Side Right
+		{
+			get { return right; }
+			set { right = value; }
+		}
 		private Side top;
+
+		public Side Top
+		{
+			get { return top; }
+			set { top = value; }
+		}
 		private Side bottom;
+
+		public Side Bottom
+		{
+			get { return bottom; }
+			set { bottom = value; }
+		}
 		private Side opposite;
+
+		public Side Opposite
+		{
+			get { return opposite; }
+			set { opposite = value; }
+		}
 
 		public Side(Brush initializationColor, Sides side)
 		{
