@@ -46,6 +46,11 @@ namespace RubiksCubeSolver
 			get { return bottom; }
 			set { bottom = value; }
 		}
+
+		public Side[] CubeSides
+		{
+			get { return new Side[] { front, back, left, right, top, bottom }; }
+		}
 		#endregion
 
 		private Side startSide;
