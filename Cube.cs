@@ -57,12 +57,12 @@ namespace RubiksCubeSolver
 
 		public Cube()
 		{
-			front = new Side(Brushes.Blue);
-			back = new Side(Brushes.Green);
-			left = new Side(Brushes.Red);
-			right = new Side(Brushes.Orange);
-			top = new Side(Brushes.White);
-			bottom = new Side(Brushes.Yellow);
+			front = new Side(Brushes.Blue, Sides.Front);
+			back = new Side(Brushes.Green, Sides.Back);
+			left = new Side(Brushes.Red, Sides.Left);
+			right = new Side(Brushes.Orange, Sides.Right);
+			top = new Side(Brushes.White, Sides.Top);
+			bottom = new Side(Brushes.Yellow, Sides.Bottom);
 
 			startSide = top;
 		}
