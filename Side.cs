@@ -22,7 +22,13 @@ namespace RubiksCubeSolver
 			set { fields = value; }
 		}
 
-		public Side(Brush initializationColor)
+		private Sides side;
+		public Sides CubeSide
+		{
+			get { return side; }
+		}
+
+		public Side(Brush initializationColor, Sides side)
 		{
 			fields = new Brush[sideLength, sideLength];
 			for (int i = 0; i < sideLength; i++)
@@ -32,6 +38,8 @@ namespace RubiksCubeSolver
 					fields[i, j] = initializationColor;
 				}
 			}
+
+			this.side = side;
 		}
 
 		public Brush[] GetRow(int row)
