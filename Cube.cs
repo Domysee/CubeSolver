@@ -182,8 +182,8 @@ namespace RubiksCubeSolver
 		public void RotateLeftCW()
 		{
 			var tempColumn = top.GetColumn(0);
-			top.SetColumn(0, back.GetColumn(2));
-			back.SetColumn(2, bottom.GetColumn(0));
+			top.SetColumn(0, back.GetColumn(2).Reverse().ToArray());
+			back.SetColumn(2, bottom.GetColumn(0).Reverse().ToArray());
 			bottom.SetColumn(0, front.GetColumn(0));
 			front.SetColumn(0, tempColumn);
 			left.RotateCW();
@@ -197,8 +197,8 @@ namespace RubiksCubeSolver
 			var tempColumn = top.GetColumn(0);
 			top.SetColumn(0, front.GetColumn(0));
 			front.SetColumn(0, bottom.GetColumn(0));
-			bottom.SetColumn(0, back.GetColumn(2));
-			back.SetColumn(2, tempColumn);
+			bottom.SetColumn(0, back.GetColumn(2).Reverse().ToArray());
+			back.SetColumn(2, tempColumn.Reverse().ToArray());
 			left.RotateCCW();
 		}
 
