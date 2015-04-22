@@ -11,6 +11,6 @@ namespace RubiksCubeSolver
 	/// </summary>
 	public enum RelativeEdgePosition
 	{
-		Left, Top, Right, Bottom
+		Left, Top, Right, Bottom, NotExisting
 	}
 }
