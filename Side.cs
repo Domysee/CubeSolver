@@ -158,5 +158,80 @@ namespace RubiksCubeSolver
 		{
 			throw new NotImplementedException();
 		}
+
+		public Brush GetSecondaryEdgeColor(RelativeEdgePosition edgePosition)
+		{
+			//these 2 (top, bottom) sides are special cases, because they change the column/row alignment with other sides
+			if (CubeSide == Sides.Top)
+			{
+				switch (edgePosition)
+				{
+					case RelativeEdgePosition.Left:
+						return left.GetRow(0)[1];
+					case RelativeEdgePosition.Right:
+						return right.GetRow(0)[1];
+					case RelativeEdgePosition.Top:
+						return top.GetRow(0)[1];
+					case RelativeEdgePosition.Bottom:
+						return bottom.GetRow(0)[1];
+				}
+			}
+			if (CubeSide == Sides.Bottom)
+			{
+				switch (edgePosition)
+				{
+					case RelativeEdgePosition.Left:
+						return left.GetRow(2)[1];
+					case RelativeEdgePosition.Right:
+						return right.GetRow(2)[1];
+					case RelativeEdgePosition.Top:
+						return top.GetRow(2)[1];
+					case RelativeEdgePosition.Bottom:
+						return bottom.GetRow(2)[1];
+				}
+			}
+			else
+			{
+				if (edgePosition == RelativeEdgePosition.Left)
+				{
+					return left.GetColumn(2)[1];
+				}
+				if (edgePosition == RelativeEdgePosition.Right)
+				{
+					return right.GetColumn(0)[1];
+				}
+				if (edgePosition == RelativeEdgePosition.Top)
+				{
+					//only has to handle the remaining 4 cases (top and bottom are handled before)
+					switch (CubeSide)
+					{
+						case Sides.Front:
+							return top.GetRow(2)[1];
+						case Sides.Left:
+							return top.GetColumn(0)[1];
+						case Sides.Back:
+							return top.GetRow(0)[1];
+						case Sides.Right:
+							return top.GetColumn(2)[1];
+					}
+				}
+				if (edgePosition == RelativeEdgePosition.Bottom)
+				{
+					//only has to handle the remaining 4 cases (top and bottom are handled before)
+					switch (CubeSide)
+					{
+						case Sides.Front:
+							return bottom.GetRow(0)[1];
+						case Sides.Left:
+							return bottom.GetColumn(0)[1];
+						case Sides.Back:
+							return bottom.GetRow(2)[1];
+						case Sides.Right:
+							return bottom.GetColumn(2)[1];
+					}
+				}
+			}
+			return null;	//default case to satisfy the compiler, should never occur
+		}
 	}
 }
