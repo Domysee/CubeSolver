@@ -9,6 +9,7 @@ namespace RubiksCubeSolver
 {
 	public class Cube
 	{
+		#region Sides
 		private Side front;
 		public Side Front
 		{
@@ -45,6 +46,14 @@ namespace RubiksCubeSolver
 			get { return bottom; }
 			set { bottom = value; }
 		}
+		#endregion
+
+		private Side startSide;
+		public Side StartSide
+		{
+			get { return startSide; }
+			set { startSide = value; }
+		}
 
 		public Cube()
 		{
@@ -54,6 +63,8 @@ namespace RubiksCubeSolver
 			right = new Side(Brushes.Orange);
 			top = new Side(Brushes.White);
 			bottom = new Side(Brushes.Yellow);
+
+			startSide = top;
 		}
 
 		/// <summary>
