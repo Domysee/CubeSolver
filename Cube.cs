@@ -289,7 +289,193 @@ namespace RubiksCubeSolver
 		public void GetRelativeEdgePosition(Sides startSide, Brush primaryColor, Brush secondaryColor, 
 			out RelativeSidePosition relativeSidePosition, out RelativeEdgePosition relativeEdgePosition)
 		{
+			foreach (var side in CubeSides)
+			{
+				var relativePosition = side.GetRelativeEdgePosition(primaryColor, secondaryColor);
+				if (relativePosition != RelativeEdgePosition.NotExisting)
+				{
+					relativeEdgePosition = relativePosition;
+					relativeSidePosition = GetSideRelation(startSide, side.CubeSide);
+					break;	//after the position is found, there cannot be another one
+				}
+			}
 
+			//default to satisfy the compiler, should never occur
+			relativeSidePosition = RelativeSidePosition.NotExisting;
+			relativeEdgePosition = RelativeEdgePosition.NotExisting;
+		}
+
+		public RelativeSidePosition GetSideRelation(Sides startSide, Sides relationSide)
+		{
+			if (startSide == Sides.Front)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Left)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Right)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Back)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Top)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+			}
+
+			if (startSide == Sides.Bottom)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Self;
+				}
+			}
+
+			return RelativeSidePosition.NotExisting;	//default to satisfy the compiler, should never occur
 		}
 
 		public Sides GetRelativeSide(Sides startSide, RelativeSidePosition relativeSide)

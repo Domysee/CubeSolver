@@ -11,6 +11,6 @@ namespace RubiksCubeSolver
 	/// </summary>
 	public enum RelativeSidePosition
 	{
-		Self, Opposite, Left, Right, Top, Bottom
+		Self, Opposite, Left, Right, Top, Bottom, NotExisting
 	}
 }
