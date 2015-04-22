@@ -126,7 +126,7 @@ namespace RubiksCubeSolver
 
 		public RelativeEdgePosition FindEdge(Brush primaryColor, Brush secondaryColor)
 		{
-
+			throw new NotImplementedException();
 		}
 	}
 }

@@ -80,7 +80,7 @@ namespace RubiksCubeSolver
 		/// for the right side, the cube is turned 90 degrees clockwise around the y-axis
 		/// for the top side, the cube is turned 90 degrees counterclockwise around the x-axis
 		/// for the bottom side, the cube is turned 90 degrees clockwise around the x-axis
-		/// for the back side, the cube is turned 180 degrees around the x-axis
+		/// for the back side, the cube is turned 180 degrees around the y-axis
 		/// 
 		/// the notations in the method are marked according to this page: 
 		/// https://rubiks.com/uploads/general_content/Rubiks_cube_3x3_solution-en.pdf
@@ -145,8 +145,8 @@ namespace RubiksCubeSolver
 		public void RotateLeftCW()
 		{
 			var tempColumn = top.GetColumn(0);
-			top.SetColumn(0, back.GetColumn(0));
-			back.SetColumn(0, bottom.GetColumn(0));
+			top.SetColumn(0, back.GetColumn(2));
+			back.SetColumn(2, bottom.GetColumn(0));
 			bottom.SetColumn(0, front.GetColumn(0));
 			front.SetColumn(0, tempColumn);
 			left.RotateCW();
@@ -160,8 +160,8 @@ namespace RubiksCubeSolver
 			var tempColumn = top.GetColumn(0);
 			top.SetColumn(0, front.GetColumn(0));
 			front.SetColumn(0, bottom.GetColumn(0));
-			bottom.SetColumn(0, back.GetColumn(0));
-			back.SetColumn(0, tempColumn);
+			bottom.SetColumn(0, back.GetColumn(2));
+			back.SetColumn(2, tempColumn);
 			left.RotateCCW();
 		}
 
@@ -173,8 +173,8 @@ namespace RubiksCubeSolver
 			var tempColumn = top.GetColumn(2);
 			top.SetColumn(2, front.GetColumn(2));
 			front.SetColumn(2, bottom.GetColumn(2));
-			bottom.SetColumn(2, back.GetColumn(2));
-			back.SetColumn(2, tempColumn);
+			bottom.SetColumn(2, back.GetColumn(0));
+			back.SetColumn(0, tempColumn);
 			right.RotateCW();
 		}
 
@@ -184,8 +184,8 @@ namespace RubiksCubeSolver
 		public void RotateRightCCW()
 		{
 			var tempColumn = top.GetColumn(2);
-			top.SetColumn(2, back.GetColumn(2));
-			back.SetColumn(2, bottom.GetColumn(2));
+			top.SetColumn(2, back.GetColumn(0));
+			back.SetColumn(0, bottom.GetColumn(2));
 			bottom.SetColumn(2, front.GetColumn(2));
 			front.SetColumn(2, tempColumn);
 			right.RotateCCW();
@@ -198,8 +198,8 @@ namespace RubiksCubeSolver
 		{
 			var tempRow = front.GetRow(0);
 			front.SetRow(0, right.GetRow(0));
-			right.SetRow(0, back.GetRow(2));
-			back.SetRow(2, left.GetRow(0));
+			right.SetRow(0, back.GetRow(0));
+			back.SetRow(0, left.GetRow(0));
 			left.SetRow(0, tempRow);
 			top.RotateCW();
 		}
@@ -211,8 +211,8 @@ namespace RubiksCubeSolver
 		{
 			var tempRow = front.GetRow(0);
 			front.SetRow(0, left.GetRow(0));
-			left.SetRow(0, back.GetRow(2));
-			back.SetRow(2, right.GetRow(0));
+			left.SetRow(0, back.GetRow(0));
+			back.SetRow(0, right.GetRow(0));
 			right.SetRow(0, tempRow);
 			top.RotateCW();
 		}
@@ -224,8 +224,8 @@ namespace RubiksCubeSolver
 		{
 			var tempRow = front.GetRow(2);
 			front.SetRow(2, left.GetRow(2));
-			left.SetRow(2, back.GetRow(0));
-			back.SetRow(0, right.GetRow(2));
+			left.SetRow(2, back.GetRow(2));
+			back.SetRow(2, right.GetRow(2));
 			right.SetRow(2, tempRow);
 			bottom.RotateCW();
 		}
@@ -237,8 +237,8 @@ namespace RubiksCubeSolver
 		{
 			var tempRow = front.GetRow(2);
 			front.SetRow(2, right.GetRow(2));
-			right.SetRow(2, back.GetRow(0));
-			back.SetRow(0, left.GetRow(2));
+			right.SetRow(2, back.GetRow(2));
+			back.SetRow(2, left.GetRow(2));
 			left.SetRow(2, tempRow);
 			bottom.RotateCCW();
 		}
@@ -270,10 +270,10 @@ namespace RubiksCubeSolver
 			{
 				if (relativeSide == RelativeSidePosition.Self) return Sides.Back;
 				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Front;
-				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
-				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
-				if (relativeSide == RelativeSidePosition.Top) return Sides.Bottom;
-				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
 			}
 			if (startSide == Sides.Left)
 			{
