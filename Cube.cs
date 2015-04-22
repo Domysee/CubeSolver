@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -289,6 +290,10 @@ namespace RubiksCubeSolver
 		public void GetRelativeEdgePosition(Sides startSide, Brush primaryColor, Brush secondaryColor, 
 			out RelativeSidePosition relativeSidePosition, out RelativeEdgePosition relativeEdgePosition)
 		{
+			//default to satisfy the compiler, should never occur
+			relativeSidePosition = RelativeSidePosition.NotExisting;
+			relativeEdgePosition = RelativeEdgePosition.NotExisting;
+
 			foreach (var side in CubeSides)
 			{
 				var relativePosition = side.GetRelativeEdgePosition(primaryColor, secondaryColor);
@@ -299,10 +304,6 @@ namespace RubiksCubeSolver
 					break;	//after the position is found, there cannot be another one
 				}
 			}
-
-			//default to satisfy the compiler, should never occur
-			relativeSidePosition = RelativeSidePosition.NotExisting;
-			relativeEdgePosition = RelativeEdgePosition.NotExisting;
 		}
 
 		public RelativeSidePosition GetSideRelation(Sides startSide, Sides relationSide)
@@ -480,6 +481,8 @@ namespace RubiksCubeSolver
 
 		public Sides GetRelativeSide(Sides startSide, RelativeSidePosition relativeSide)
 		{
+			Debug.Assert(relativeSide != RelativeSidePosition.NotExisting);
+
 			if (startSide == Sides.Front)
 			{
 				if (relativeSide == RelativeSidePosition.Self) return Sides.Front;

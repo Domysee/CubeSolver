@@ -8,6 +8,7 @@ using System.Windows.Media;
 
 namespace RubiksCubeSolver
 {
+	[DebuggerDisplay("{side}")]
 	public class Side
 	{
 		private const int sideLength = 3;

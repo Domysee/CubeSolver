@@ -4,6 +4,7 @@
         Title="MainWindow" Height="350" Width="525" Background="Black">
     <Grid>
         <StackPanel>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=Test}">Test</Button>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionL}">L</Button>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionLi}">Li</Button>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionR}">R</Button>

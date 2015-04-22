@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -285,6 +286,13 @@ namespace RubiksCubeSolver
 		#endregion
 
 		#region Commands
+		private RelayCommand test;
+
+		public RelayCommand Test
+		{
+			get { return test; }
+			set { test = value; }
+		}
 		private RelayCommand randomize;
 
 		public RelayCommand Randomize
@@ -386,6 +394,14 @@ namespace RubiksCubeSolver
 
 		private void initializeCommands()
 		{
+			test = new RelayCommand((param) =>
+			{
+				RelativeSidePosition relativeSidePosition;
+				RelativeEdgePosition relativeEdgePosition;
+				cube.GetRelativeEdgePosition(Sides.Top, Brushes.White, Brushes.Blue, out relativeSidePosition, out relativeEdgePosition);
+				var relativeSide = cube.GetSideFromEnum(cube.GetRelativeSide(Sides.Top, relativeSidePosition));
+				MessageBox.Show(relativeSide.CubeSide.ToString());
+			});
 			randomize = new RelayCommand((param) =>
 			{
 				new CubeRandomizer().DoRandomTurns(cube);
