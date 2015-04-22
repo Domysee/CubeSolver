@@ -67,6 +67,7 @@ namespace RubiksCubeSolver
 			startSide = top;
 		}
 
+		#region Rotations
 		/// <summary>
 		/// for the turns, the sides are rotated to the front
 		/// the y-axis points upwards, the x-axis to the right and the z-axis backwards
@@ -235,6 +236,97 @@ namespace RubiksCubeSolver
 			back.SetRow(0, left.GetRow(2));
 			left.SetRow(2, tempRow);
 			bottom.RotateCCW();
+		}
+		#endregion
+
+		/// <summary>
+		/// finds the position of that edge
+		/// </summary>
+		/// <param name="startSide"></param>
+		/// <param name="primaryColor">determines to which of the 2 adjacent sides the resulting position is relative to</param>
+		/// <param name="secondaryColor"></param>
+		public void FindEdge(Sides startSide, Brush primaryColor, Brush secondaryColor)
+		{
+
+		}
+
+		public Sides GetRelativeSide(Sides startSide, RelativeSidePosition relativeSide)
+		{
+			if (startSide == Sides.Front)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
+			}
+			if (startSide == Sides.Back)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Bottom;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Top;
+			}
+			if (startSide == Sides.Left)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
+			}
+			if (startSide == Sides.Right)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
+			}
+			if (startSide == Sides.Top)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Bottom;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Front;
+			}
+			if (startSide == Sides.Bottom)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Bottom;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Back;
+			}
+			return startSide;	//default value to satisfy the compiler, should never be used
+		}
+
+		public Side GetSideFromEnum(Sides side)
+		{
+			switch (side)
+			{
+				case Sides.Front:
+					return front;
+				case Sides.Back:
+					return back;
+				case Sides.Left:
+					return left;
+				case Sides.Right:
+					return right;
+				case Sides.Top:
+					return top;
+				case Sides.Bottom:
+					return bottom;
+			}
+			return null;
 		}
 	}
 }

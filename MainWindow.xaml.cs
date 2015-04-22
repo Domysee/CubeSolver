@@ -29,11 +29,5 @@ namespace RubiksCubeSolver
 			viewmodel = new MainWindowViewModel();
 			this.DataContext = viewmodel;
 		}
-
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			viewmodel.cube.RotateLeftCW();
-			viewmodel.raiseAllPropertiesChanged();
-		}
 	}
 }
