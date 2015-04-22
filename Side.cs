@@ -156,7 +156,24 @@ namespace RubiksCubeSolver
 
 		public RelativeEdgePosition FindEdge(Brush primaryColor, Brush secondaryColor)
 		{
-			throw new NotImplementedException();
+			if (fields[1, 0] == primaryColor && GetSecondaryEdgeColor(RelativeEdgePosition.Left) == secondaryColor)
+			{
+				return RelativeEdgePosition.Left;
+			}
+			if (fields[0, 1] == primaryColor && GetSecondaryEdgeColor(RelativeEdgePosition.Top) == secondaryColor)
+			{
+				return RelativeEdgePosition.Top;
+			}
+			if (fields[1, 2] == primaryColor && GetSecondaryEdgeColor(RelativeEdgePosition.Right) == secondaryColor)
+			{
+				return RelativeEdgePosition.Right;
+			}
+			if (fields[2, 1] == primaryColor && GetSecondaryEdgeColor(RelativeEdgePosition.Bottom) == secondaryColor)
+			{
+				return RelativeEdgePosition.Bottom;
+			}
+
+			return RelativeEdgePosition.NotExisting;
 		}
 
 		public Brush GetSecondaryEdgeColor(RelativeEdgePosition edgePosition)
