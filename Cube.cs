@@ -157,9 +157,9 @@ namespace RubiksCubeSolver
 		{
 			var tempRow = top.GetRow(0);
 			top.SetRow(0, right.GetColumn(2));
-			right.SetColumn(2, bottom.GetRow(2));
+			right.SetColumn(2, bottom.GetRow(2).Reverse().ToArray());
 			bottom.SetRow(2, left.GetColumn(0));
-			left.SetColumn(0, tempRow);
+			left.SetColumn(0, tempRow.Reverse().ToArray());
 			back.RotateCW();
 		}
 
@@ -169,9 +169,9 @@ namespace RubiksCubeSolver
 		public void RotateBackCCW()
 		{
 			var tempRow = top.GetRow(0);
-			top.SetRow(0, left.GetColumn(0));
+			top.SetRow(0, left.GetColumn(0).Reverse().ToArray());
 			left.SetColumn(0, bottom.GetRow(2));
-			bottom.SetRow(2, right.GetColumn(2));
+			bottom.SetRow(2, right.GetColumn(2).Reverse().ToArray());
 			right.SetColumn(2, tempRow);
 			back.RotateCCW();
 		}
