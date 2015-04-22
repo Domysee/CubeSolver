@@ -286,7 +286,8 @@ namespace RubiksCubeSolver
 		/// <param name="startSide"></param>
 		/// <param name="primaryColor">determines to which of the 2 adjacent sides the resulting position is relative to</param>
 		/// <param name="secondaryColor"></param>
-		public void FindEdge(Sides startSide, Brush primaryColor, Brush secondaryColor)
+		public void GetRelativeEdgePosition(Sides startSide, Brush primaryColor, Brush secondaryColor, 
+			out RelativeSidePosition relativeSidePosition, out RelativeEdgePosition relativeEdgePosition)
 		{
 
 		}

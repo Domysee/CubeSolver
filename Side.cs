@@ -154,7 +154,7 @@ namespace RubiksCubeSolver
 			fields = newFields;
 		}
 
-		public RelativeEdgePosition FindEdge(Brush primaryColor, Brush secondaryColor)
+		public RelativeEdgePosition GetRelativeEdgePosition(Brush primaryColor, Brush secondaryColor)
 		{
 			if (fields[1, 0] == primaryColor && GetSecondaryEdgeColor(RelativeEdgePosition.Left) == secondaryColor)
 			{
