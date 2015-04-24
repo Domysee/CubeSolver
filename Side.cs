@@ -64,9 +64,17 @@ namespace RubiksCubeSolver
 			get { return opposite; }
 			set { opposite = value; }
 		}
+		private Brush color;
+
+		public Brush Color
+		{
+			get { return color; }
+			set { color = value; }
+		}
 
 		public Side(Brush initializationColor, Sides side)
 		{
+			color = initializationColor;
 			fields = new Brush[sideLength, sideLength];
 			for (int i = 0; i < sideLength; i++)
 			{
