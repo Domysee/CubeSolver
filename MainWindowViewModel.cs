@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RubiksCubeSolver.StartCrossMoves;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -396,7 +397,7 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				
+				MessageBox.Show(new StartCrossMove1().Applicable(cube, RelativeSidePosition.Bottom).ToString());
 			});
 			randomize = new RelayCommand((param) =>
 			{

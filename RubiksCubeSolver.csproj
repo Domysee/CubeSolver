@@ -54,6 +54,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CubeRandomizer.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="HumanCubeSolver3x3.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Matrix.cs" />

@@ -54,13 +54,6 @@ namespace RubiksCubeSolver
 		}
 		#endregion
 
-		private Side startSide;
-		public Side StartSide
-		{
-			get { return startSide; }
-			set { startSide = value; }
-		}
-
 		public Cube()
 		{
 			front = new Side(Brushes.Blue, Sides.Front);
@@ -105,8 +98,6 @@ namespace RubiksCubeSolver
 			bottom.Top = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Top));
 			bottom.Bottom = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Bottom));
 			bottom.Opposite = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Opposite));
-
-			startSide = top;
 		}
 
 		#region Rotations
