@@ -37,10 +37,10 @@ namespace RubiksCubeSolver
 		{
 			switch (relativeSide)
 			{
-				case RelativeSidePosition.Bottom: return RelativeEdgePosition.Top;
-				case RelativeSidePosition.Top: return RelativeEdgePosition.Bottom;
-				case RelativeSidePosition.Left: return RelativeEdgePosition.Right;
-				case RelativeSidePosition.Right: return RelativeEdgePosition.Left;
+				case RelativeSidePosition.Bottom: return RelativeEdgePosition.Bottom;
+				case RelativeSidePosition.Top: return RelativeEdgePosition.Top;
+				case RelativeSidePosition.Left: return RelativeEdgePosition.Left;
+				case RelativeSidePosition.Right: return RelativeEdgePosition.Right;
 				default: return RelativeEdgePosition.NotExisting;
 			}
 		}
