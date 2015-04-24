@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace RubiksCubeSolver
 {
 	/// <summary>
-	/// represents a set of moves
+	/// represents a set of moves to solve the first cross
+	/// Top is takes as start side
 	/// </summary>
 	public interface IStartCrossMove
 	{

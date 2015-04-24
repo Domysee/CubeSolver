@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace RubiksCubeSolver.StartCrossMoves
 {
+	/// <summary>
+	/// represents the situation where the edge is on the opposite side, but adjacent to the correct color
+	/// </summary>
 	public class StartCrossMove1 : IStartCrossMove
 	{
 		public void Apply(Cube cube, RelativeSidePosition side)
 		{
-			throw new NotImplementedException();
+			cube.RotateSideCW(cube.GetRelativeSide(Sides.Top, side));
+			cube.RotateSideCW(cube.GetRelativeSide(Sides.Top, side));
 		}
 
 		public double Applicable(Cube cube, RelativeSidePosition side)

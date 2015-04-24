@@ -397,7 +397,11 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				MessageBox.Show(new StartCrossMove1().Applicable(cube, RelativeSidePosition.Bottom).ToString());
+				var move = new StartCrossMove1();
+				if (move.Applicable(cube, RelativeSidePosition.Bottom) == 1)
+				{
+					move.Apply(cube, RelativeSidePosition.Bottom);
+				}
 			});
 			randomize = new RelayCommand((param) =>
 			{

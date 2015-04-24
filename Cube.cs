@@ -557,6 +557,38 @@ namespace RubiksCubeSolver
 					return bottom;
 			}
 			return null;
-		}	
+		}
+
+		public void RotateSideCW(Sides side)
+		{
+			if (side == Sides.Back)
+				RotateBackCW();
+			if (side == Sides.Front)
+				RotateFrontCW();
+			if (side == Sides.Left)
+				RotateLeftCW();
+			if (side == Sides.Right)
+				RotateRightCW();
+			if (side == Sides.Top)
+				RotateTopCW();
+			if (side == Sides.Bottom)
+				RotateBottomCW();
+		}
+
+		public void RotateSideCCW(Sides side)
+		{
+			if (side == Sides.Back)
+				RotateBackCCW();
+			if (side == Sides.Front)
+				RotateFrontCCW();
+			if (side == Sides.Left)
+				RotateLeftCCW();
+			if (side == Sides.Right)
+				RotateRightCCW();
+			if (side == Sides.Top)
+				RotateTopCCW();
+			if (side == Sides.Bottom)
+				RotateBottomCCW();
+		}
 	}
 }
