@@ -259,5 +259,17 @@ namespace RubiksCubeSolver
 			}
 			return null;	//default case to satisfy the compiler, should never occur
 		}
+
+		public Side GetRelativeSide(RelativeSidePosition relativeSide)
+		{
+			if (relativeSide == RelativeSidePosition.Left) return left;
+			if (relativeSide == RelativeSidePosition.Right) return right;
+			if (relativeSide == RelativeSidePosition.Top) return top;
+			if (relativeSide == RelativeSidePosition.Bottom) return bottom;
+			if (relativeSide == RelativeSidePosition.Opposite) return opposite;
+			if (relativeSide == RelativeSidePosition.Self) return this;
+
+			return null;	//default case to satisfy the compiler, should never occur;
+		}
 	}
 }
