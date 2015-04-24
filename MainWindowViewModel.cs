@@ -396,23 +396,7 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				RelativeSidePosition relativeSidePosition;
-				RelativeEdgePosition relativeEdgePosition;
-				string output = "";
-				string[] brushes = new string[] { "White", "Yellow", "Blue", "Green", "Red", "Orange" };
-				foreach (Sides side in Enum.GetValues(typeof(Sides)))
-				{
-					foreach (string brush1 in brushes)
-					{
-						foreach (string brush2 in brushes)
-						{
-							cube.GetRelativeEdgePosition(side, new BrushConverter().ConvertFromString(brush1) as Brush, new BrushConverter().ConvertFromString(brush2) as Brush, out relativeSidePosition, out relativeEdgePosition);
-							output += side + " " + brush1 + " " + brush2 + "\n";
-							output += relativeSidePosition + " " + relativeEdgePosition + "\n\n";
-						}
-					}
-				}
-				MessageBox.Show(output);
+				
 			});
 			randomize = new RelayCommand((param) =>
 			{

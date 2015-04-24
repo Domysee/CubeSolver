@@ -287,6 +287,8 @@ namespace RubiksCubeSolver
 		/// <param name="startSide"></param>
 		/// <param name="primaryColor">determines to which of the 2 adjacent sides the resulting position is relative to</param>
 		/// <param name="secondaryColor"></param>
+		/// <param name="relativeSidePosition">contains the relative side to the startSide</param>
+		/// <param name="relativeEdgePosition">contains the edge relative to the relative side</param>
 		public void GetRelativeEdgePosition(Sides startSide, Brush primaryColor, Brush secondaryColor, 
 			out RelativeSidePosition relativeSidePosition, out RelativeEdgePosition relativeEdgePosition)
 		{
@@ -301,6 +303,12 @@ namespace RubiksCubeSolver
 				{
 					relativeEdgePosition = relativePosition;
 					relativeSidePosition = GetSideRelation(startSide, side.CubeSide);
+					//normally, to create a real relative position of the edge, here would be a need for special handling of sides and relative sides combinations
+					//but this would introduce a lot of special handling in other places too, which is unnecessary
+					//therefore, the relativeEdgePosition is relative to the side
+					//e.g. in a solved cube: when back (green) is the startside, the edge (primary white, secondary blue) is the top side relative to back
+					//because the edge is relative to the top side, the resulting relative edge position is bottom
+					//the view of the relative edge position is as if the cube is not turned 
 					break;	//after the position is found, there cannot be another one
 				}
 			}
@@ -558,6 +566,6 @@ namespace RubiksCubeSolver
 					return bottom;
 			}
 			return null;
-		}
+		}	
 	}
 }
