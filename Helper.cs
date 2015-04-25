@@ -336,5 +336,33 @@ namespace RubiksCubeSolver
 			}
 			return startSide;	//default value to satisfy the compiler, should never be used
 		}
+
+		public static RelativeEdgePosition GetRelativeEdge(RelativeEdgePosition startEdge, RelativeEdgePosition relativeEdge)
+		{
+			if (relativeEdge == RelativeEdgePosition.Bottom) return startEdge;
+			if (relativeEdge == RelativeEdgePosition.Left)
+			{
+				if (startEdge == RelativeEdgePosition.Bottom) return RelativeEdgePosition.Left;
+				if (startEdge == RelativeEdgePosition.Left) return RelativeEdgePosition.Top;
+				if (startEdge == RelativeEdgePosition.Top) return RelativeEdgePosition.Right;
+				if (startEdge == RelativeEdgePosition.Right) return RelativeEdgePosition.Bottom;
+			}
+			if (relativeEdge == RelativeEdgePosition.Top)
+			{
+				if (startEdge == RelativeEdgePosition.Bottom) return RelativeEdgePosition.Top;
+				if (startEdge == RelativeEdgePosition.Left) return RelativeEdgePosition.Right;
+				if (startEdge == RelativeEdgePosition.Top) return RelativeEdgePosition.Bottom;
+				if (startEdge == RelativeEdgePosition.Right) return RelativeEdgePosition.Left;
+			}
+			if (relativeEdge == RelativeEdgePosition.Right)
+			{
+				if (startEdge == RelativeEdgePosition.Bottom) return RelativeEdgePosition.Right;
+				if (startEdge == RelativeEdgePosition.Left) return RelativeEdgePosition.Bottom;
+				if (startEdge == RelativeEdgePosition.Top) return RelativeEdgePosition.Left;
+				if (startEdge == RelativeEdgePosition.Right) return RelativeEdgePosition.Top;
+			}
+
+			return RelativeEdgePosition.NotExisting;
+		}
 	}
 }
