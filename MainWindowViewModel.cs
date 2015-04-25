@@ -400,9 +400,12 @@ namespace RubiksCubeSolver
 				var move = new StartCrossMove2();
 				foreach (RelativeSidePosition relativeSidePosition in Enum.GetValues(typeof(RelativeSidePosition)))
 				{
-					if (relativeSidePosition != RelativeSidePosition.NotExisting && move.Applicable(cube, relativeSidePosition) == 1)
+					if (relativeSidePosition != RelativeSidePosition.NotExisting && 
+						relativeSidePosition != RelativeSidePosition.Self && 
+						relativeSidePosition != RelativeSidePosition.Opposite && 
+						move.Applicable(cube, relativeSidePosition) == 1)
 					{
-						//move.Apply(cube, relativeSidePosition);
+						move.Apply(cube, relativeSidePosition);
 					}
 				}
 				raiseAllPropertiesChanged();

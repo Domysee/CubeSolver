@@ -15,7 +15,6 @@ namespace RubiksCubeSolver.StartCrossMoves
 		public void Apply(Cube cube, RelativeSidePosition side)
 		{
 			cube.RotateSideCW(Helper.GetRelativeSide(Sides.Top, side));
-			cube.RotateSideCW(Helper.GetRelativeSide(Sides.Top, side));
 		}
 
 		public double Applicable(Cube cube, RelativeSidePosition side)
