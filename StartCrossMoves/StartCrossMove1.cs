@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,11 +25,12 @@ namespace RubiksCubeSolver.StartCrossMoves
 			cube.GetRelativeEdgePosition(cube.Top.CubeSide, cube.Top.Color, cube.Top.GetRelativeSide(side).Color,
 				out relativeSidePosition, out relativeEdgePosition);
 
+			RelativeSidePosition expectedSidePositon = RelativeSidePosition.Opposite;
 			RelativeEdgePosition expectedEdgePosition = Helper.ConvertRelativeSidePositionToRelativeEdgePosition(side);
 			if (expectedEdgePosition == RelativeEdgePosition.Top || expectedEdgePosition == RelativeEdgePosition.Bottom)
 				expectedEdgePosition = Helper.GetOppositeRelativeEdge(expectedEdgePosition);	//because on the opposite side bottom and top are inverted
 
-			if (relativeSidePosition == RelativeSidePosition.Opposite && relativeEdgePosition == expectedEdgePosition)
+			if (relativeSidePosition == expectedSidePositon && relativeEdgePosition == expectedEdgePosition)
 				return 1;
 			else
 				return 0;

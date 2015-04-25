@@ -398,10 +398,14 @@ namespace RubiksCubeSolver
 			test = new RelayCommand((param) =>
 			{
 				var move = new StartCrossMove1();
-				if (move.Applicable(cube, RelativeSidePosition.Bottom) == 1)
+				foreach (RelativeSidePosition relativeSidePosition in Enum.GetValues(typeof(RelativeSidePosition)))
 				{
-					move.Apply(cube, RelativeSidePosition.Bottom);
+					if (relativeSidePosition != RelativeSidePosition.NotExisting && move.Applicable(cube, relativeSidePosition) == 1)
+					{
+						move.Apply(cube, relativeSidePosition);
+					}
 				}
+				raiseAllPropertiesChanged();
 			});
 			randomize = new RelayCommand((param) =>
 			{
