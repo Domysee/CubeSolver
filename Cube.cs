@@ -63,41 +63,41 @@ namespace RubiksCubeSolver
 			top = new Side(Brushes.White, Sides.Top);
 			bottom = new Side(Brushes.Yellow, Sides.Bottom);
 
-			front.Left = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Left));
-			front.Right = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Right));
-			front.Top = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Top));
-			front.Bottom = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Bottom));
-			front.Opposite = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Opposite));
+			front.Left = GetSideFromEnum(GetRelativeSide(Sides.Front, RelativeSidePosition.Left));
+			front.Right = GetSideFromEnum(GetRelativeSide(Sides.Front, RelativeSidePosition.Right));
+			front.Top = GetSideFromEnum(GetRelativeSide(Sides.Front, RelativeSidePosition.Top));
+			front.Bottom = GetSideFromEnum(GetRelativeSide(Sides.Front, RelativeSidePosition.Bottom));
+			front.Opposite = GetSideFromEnum(GetRelativeSide(Sides.Front, RelativeSidePosition.Opposite));
 
-			back.Left = GetSideFromEnum(Helper.GetRelativeSide(Sides.Back, RelativeSidePosition.Left));
-			back.Right = GetSideFromEnum(Helper.GetRelativeSide(Sides.Back, RelativeSidePosition.Right));
-			back.Top = GetSideFromEnum(Helper.GetRelativeSide(Sides.Back, RelativeSidePosition.Top));
-			back.Bottom = GetSideFromEnum(Helper.GetRelativeSide(Sides.Back, RelativeSidePosition.Bottom));
-			back.Opposite = GetSideFromEnum(Helper.GetRelativeSide(Sides.Back, RelativeSidePosition.Opposite));
+			back.Left = GetSideFromEnum(GetRelativeSide(Sides.Back, RelativeSidePosition.Left));
+			back.Right = GetSideFromEnum(GetRelativeSide(Sides.Back, RelativeSidePosition.Right));
+			back.Top = GetSideFromEnum(GetRelativeSide(Sides.Back, RelativeSidePosition.Top));
+			back.Bottom = GetSideFromEnum(GetRelativeSide(Sides.Back, RelativeSidePosition.Bottom));
+			back.Opposite = GetSideFromEnum(GetRelativeSide(Sides.Back, RelativeSidePosition.Opposite));
 
-			left.Left = GetSideFromEnum(Helper.GetRelativeSide(Sides.Left, RelativeSidePosition.Left));
-			left.Right = GetSideFromEnum(Helper.GetRelativeSide(Sides.Left, RelativeSidePosition.Right));
-			left.Top = GetSideFromEnum(Helper.GetRelativeSide(Sides.Left, RelativeSidePosition.Top));
-			left.Bottom = GetSideFromEnum(Helper.GetRelativeSide(Sides.Left, RelativeSidePosition.Bottom));
-			left.Opposite = GetSideFromEnum(Helper.GetRelativeSide(Sides.Left, RelativeSidePosition.Opposite));
+			left.Left = GetSideFromEnum(GetRelativeSide(Sides.Left, RelativeSidePosition.Left));
+			left.Right = GetSideFromEnum(GetRelativeSide(Sides.Left, RelativeSidePosition.Right));
+			left.Top = GetSideFromEnum(GetRelativeSide(Sides.Left, RelativeSidePosition.Top));
+			left.Bottom = GetSideFromEnum(GetRelativeSide(Sides.Left, RelativeSidePosition.Bottom));
+			left.Opposite = GetSideFromEnum(GetRelativeSide(Sides.Left, RelativeSidePosition.Opposite));
 
-			right.Left = GetSideFromEnum(Helper.GetRelativeSide(Sides.Right, RelativeSidePosition.Left));
-			right.Right = GetSideFromEnum(Helper.GetRelativeSide(Sides.Right, RelativeSidePosition.Right));
-			right.Top = GetSideFromEnum(Helper.GetRelativeSide(Sides.Right, RelativeSidePosition.Top));
-			right.Bottom = GetSideFromEnum(Helper.GetRelativeSide(Sides.Right, RelativeSidePosition.Bottom));
-			right.Opposite = GetSideFromEnum(Helper.GetRelativeSide(Sides.Right, RelativeSidePosition.Opposite));
+			right.Left = GetSideFromEnum(GetRelativeSide(Sides.Right, RelativeSidePosition.Left));
+			right.Right = GetSideFromEnum(GetRelativeSide(Sides.Right, RelativeSidePosition.Right));
+			right.Top = GetSideFromEnum(GetRelativeSide(Sides.Right, RelativeSidePosition.Top));
+			right.Bottom = GetSideFromEnum(GetRelativeSide(Sides.Right, RelativeSidePosition.Bottom));
+			right.Opposite = GetSideFromEnum(GetRelativeSide(Sides.Right, RelativeSidePosition.Opposite));
 
-			top.Left = GetSideFromEnum(Helper.GetRelativeSide(Sides.Top, RelativeSidePosition.Left));
-			top.Right = GetSideFromEnum(Helper.GetRelativeSide(Sides.Top, RelativeSidePosition.Right));
-			top.Top = GetSideFromEnum(Helper.GetRelativeSide(Sides.Top, RelativeSidePosition.Top));
-			top.Bottom = GetSideFromEnum(Helper.GetRelativeSide(Sides.Top, RelativeSidePosition.Bottom));
-			top.Opposite = GetSideFromEnum(Helper.GetRelativeSide(Sides.Top, RelativeSidePosition.Opposite));
+			top.Left = GetSideFromEnum(GetRelativeSide(Sides.Top, RelativeSidePosition.Left));
+			top.Right = GetSideFromEnum(GetRelativeSide(Sides.Top, RelativeSidePosition.Right));
+			top.Top = GetSideFromEnum(GetRelativeSide(Sides.Top, RelativeSidePosition.Top));
+			top.Bottom = GetSideFromEnum(GetRelativeSide(Sides.Top, RelativeSidePosition.Bottom));
+			top.Opposite = GetSideFromEnum(GetRelativeSide(Sides.Top, RelativeSidePosition.Opposite));
 
-			bottom.Left = GetSideFromEnum(Helper.GetRelativeSide(Sides.Bottom, RelativeSidePosition.Left));
-			bottom.Right = GetSideFromEnum(Helper.GetRelativeSide(Sides.Bottom, RelativeSidePosition.Right));
-			bottom.Top = GetSideFromEnum(Helper.GetRelativeSide(Sides.Bottom, RelativeSidePosition.Top));
-			bottom.Bottom = GetSideFromEnum(Helper.GetRelativeSide(Sides.Bottom, RelativeSidePosition.Bottom));
-			bottom.Opposite = GetSideFromEnum(Helper.GetRelativeSide(Sides.Bottom, RelativeSidePosition.Opposite));
+			bottom.Left = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Left));
+			bottom.Right = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Right));
+			bottom.Top = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Top));
+			bottom.Bottom = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Bottom));
+			bottom.Opposite = GetSideFromEnum(GetRelativeSide(Sides.Bottom, RelativeSidePosition.Opposite));
 		}
 
 		#region Rotations
@@ -293,7 +293,7 @@ namespace RubiksCubeSolver
 				if (relativePosition != RelativeEdgePosition.NotExisting)
 				{
 					relativeEdgePosition = relativePosition;
-					relativeSidePosition = Helper.GetSideRelation(startSide, side.CubeSide);
+					relativeSidePosition = GetSideRelation(startSide, side.CubeSide);
 					//normally, to create a real relative position of the edge, here would be a need for special handling of sides and relative sides combinations
 					//but this would introduce a lot of special handling in other places too, which is unnecessary
 					//therefore, the relativeEdgePosition is relative to the side
@@ -303,6 +303,240 @@ namespace RubiksCubeSolver
 					break;	//after the position is found, there cannot be another one
 				}
 			}
+		}
+
+		public RelativeSidePosition GetSideRelation(Sides startSide, Sides relationSide)
+		{
+			if (startSide == Sides.Front)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Left)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Right)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Back)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+			}
+
+			if (startSide == Sides.Top)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Self;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+			}
+
+			if (startSide == Sides.Bottom)
+			{
+				if (relationSide == Sides.Front)
+				{
+					return RelativeSidePosition.Top;
+				}
+				if (relationSide == Sides.Back)
+				{
+					return RelativeSidePosition.Bottom;
+				}
+				if (relationSide == Sides.Left)
+				{
+					return RelativeSidePosition.Left;
+				}
+				if (relationSide == Sides.Right)
+				{
+					return RelativeSidePosition.Right;
+				}
+				if (relationSide == Sides.Top)
+				{
+					return RelativeSidePosition.Opposite;
+				}
+				if (relationSide == Sides.Bottom)
+				{
+					return RelativeSidePosition.Self;
+				}
+			}
+
+			return RelativeSidePosition.NotExisting;	//default to satisfy the compiler, should never occur
+		}
+
+		public Sides GetRelativeSide(Sides startSide, RelativeSidePosition relativeSide)
+		{
+			Debug.Assert(relativeSide != RelativeSidePosition.NotExisting);
+
+			if (startSide == Sides.Front)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
+			}
+			if (startSide == Sides.Back)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
+			}
+			if (startSide == Sides.Left)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
+			}
+			if (startSide == Sides.Right)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Bottom;
+			}
+			if (startSide == Sides.Top)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Bottom;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Back;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Front;
+			}
+			if (startSide == Sides.Bottom)
+			{
+				if (relativeSide == RelativeSidePosition.Self) return Sides.Bottom;
+				if (relativeSide == RelativeSidePosition.Opposite) return Sides.Top;
+				if (relativeSide == RelativeSidePosition.Left) return Sides.Left;
+				if (relativeSide == RelativeSidePosition.Right) return Sides.Right;
+				if (relativeSide == RelativeSidePosition.Top) return Sides.Front;
+				if (relativeSide == RelativeSidePosition.Bottom) return Sides.Back;
+			}
+			return startSide;	//default value to satisfy the compiler, should never be used
 		}
 
 		public Side GetSideFromEnum(Sides side)
