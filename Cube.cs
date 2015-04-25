@@ -242,7 +242,7 @@ namespace RubiksCubeSolver
 			left.SetRow(0, back.GetRow(0));
 			back.SetRow(0, right.GetRow(0));
 			right.SetRow(0, tempRow);
-			top.RotateCW();
+			top.RotateCCW();
 		}
 
 		/// <summary>
