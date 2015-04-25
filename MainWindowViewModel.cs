@@ -397,12 +397,12 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				var move = new StartCrossMove1();
+				var move = new StartCrossMove2();
 				foreach (RelativeSidePosition relativeSidePosition in Enum.GetValues(typeof(RelativeSidePosition)))
 				{
 					if (relativeSidePosition != RelativeSidePosition.NotExisting && move.Applicable(cube, relativeSidePosition) == 1)
 					{
-						move.Apply(cube, relativeSidePosition);
+						//move.Apply(cube, relativeSidePosition);
 					}
 				}
 				raiseAllPropertiesChanged();
