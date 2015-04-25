@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace RubiksCubeSolver.StartCrossMoves
 {
 	/// <summary>
-	/// represents the situation where the edge is in the same position as in StartCrossMove3, but rotated wrongly
+	/// represents the situation where the edge is in the same position as in StartCrossMove1, but rotated wrongly
 	/// </summary>
 	public class StartCrossMove7 : IStartCrossMove
 	{
