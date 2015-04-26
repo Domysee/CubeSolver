@@ -9,6 +9,7 @@ namespace RubiksCubeSolver.StartCrossMoves
 {
 	/// <summary>
 	/// represents the situation where the edge is in the same position as in StartCrossMove2, but rotated wrongly
+	/// on the front side, edge on the left
 	/// </summary>
 	public class StartCrossMove5 : IStartCrossMove
 	{

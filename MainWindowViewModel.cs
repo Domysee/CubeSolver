@@ -388,7 +388,7 @@ namespace RubiksCubeSolver
 		#endregion
 
 		public MainWindowViewModel()
-		{
+		{		
 			cube = new Cube();
 			initializeCommands();
 		}

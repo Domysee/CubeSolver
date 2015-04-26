@@ -9,6 +9,7 @@ namespace RubiksCubeSolver.StartCrossMoves
 {
 	/// <summary>
 	/// represents the situation where the edge is one counterclockwise rotation away from the correct position
+	/// on the right side, edge on the left
 	/// </summary>
 	public class StartCrossMove3 : IStartCrossMove
 	{
