@@ -397,7 +397,7 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				var move = new StartCrossMove14();
+				var move = new StartCrossMove15();
 				foreach (RelativeSidePosition relativeSidePosition in Enum.GetValues(typeof(RelativeSidePosition)))
 				{
 					if (relativeSidePosition != RelativeSidePosition.NotExisting && 

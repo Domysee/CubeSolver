@@ -63,6 +63,7 @@
     <Compile Include="RelayCommand.cs" />
     <Compile Include="Side.cs" />
     <Compile Include="StartCrossMoves\StartCrossMove10.cs" />
+    <Compile Include="StartCrossMoves\StartCrossMove15.cs" />
     <Compile Include="StartCrossMoves\StartCrossMove14.cs" />
     <Compile Include="StartCrossMoves\StartCrossMove13.cs" />
     <Compile Include="StartCrossMoves\StartCrossMove12.cs" />
