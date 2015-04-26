@@ -270,6 +270,38 @@ namespace RubiksCubeSolver
 			left.SetRow(2, tempRow);
 			bottom.RotateCCW();
 		}
+
+		public void RotateSideCW(Sides side)
+		{
+			if (side == Sides.Back)
+				RotateBackCW();
+			if (side == Sides.Front)
+				RotateFrontCW();
+			if (side == Sides.Left)
+				RotateLeftCW();
+			if (side == Sides.Right)
+				RotateRightCW();
+			if (side == Sides.Top)
+				RotateTopCW();
+			if (side == Sides.Bottom)
+				RotateBottomCW();
+		}
+
+		public void RotateSideCCW(Sides side)
+		{
+			if (side == Sides.Back)
+				RotateBackCCW();
+			if (side == Sides.Front)
+				RotateFrontCCW();
+			if (side == Sides.Left)
+				RotateLeftCCW();
+			if (side == Sides.Right)
+				RotateRightCCW();
+			if (side == Sides.Top)
+				RotateTopCCW();
+			if (side == Sides.Bottom)
+				RotateBottomCCW();
+		}
 		#endregion
 
 		/// <summary>
@@ -325,36 +357,20 @@ namespace RubiksCubeSolver
 			return null;
 		}
 
-		public void RotateSideCW(Sides side)
+		#region Solve States
+		public bool IsTopCrossSolved()
 		{
-			if (side == Sides.Back)
-				RotateBackCW();
-			if (side == Sides.Front)
-				RotateFrontCW();
-			if (side == Sides.Left)
-				RotateLeftCW();
-			if (side == Sides.Right)
-				RotateRightCW();
-			if (side == Sides.Top)
-				RotateTopCW();
-			if (side == Sides.Bottom)
-				RotateBottomCW();
-		}
+			//check if the top cross is all white
+			if (top.Fields[0, 1] != top.Color || top.Fields[1, 0] != top.Color || top.Fields[1, 2] != top.Color || top.Fields[2, 1] != top.Color) return false;
 
-		public void RotateSideCCW(Sides side)
-		{
-			if (side == Sides.Back)
-				RotateBackCCW();
-			if (side == Sides.Front)
-				RotateFrontCCW();
-			if (side == Sides.Left)
-				RotateLeftCCW();
-			if (side == Sides.Right)
-				RotateRightCCW();
-			if (side == Sides.Top)
-				RotateTopCCW();
-			if (side == Sides.Bottom)
-				RotateBottomCCW();
+			//check if the cross edges are in the correct position
+			if (top.Left.Fields[0, 1] != top.Left.Color) return false;
+			if (top.Top.Fields[0, 1] != top.Top.Color) return false;
+			if (top.Right.Fields[0, 1] != top.Right.Color) return false;
+			if (top.Bottom.Fields[0, 1] != top.Bottom.Color) return false;
+
+			return true;
 		}
+		#endregion
 	}
 }
