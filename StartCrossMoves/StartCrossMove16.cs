@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 namespace RubiksCubeSolver.StartCrossMoves
 {
 	/// <summary>
-	/// on the right side, edge bottom
+	/// on the right side, edge right
 	/// </summary>
-	public class StartCrossMove15 : IStartCrossMove
+	public class StartCrossMove16 : IStartCrossMove
 	{
 		public void Apply(Cube cube, RelativeSidePosition side)
 		{
+			cube.RotateSideCW(Helper.GetRelativeSide(Helper.GetRelativeSide(Sides.Top, side), RelativeSidePosition.Right));
 			cube.RotateSideCW(Helper.GetRelativeSide(Helper.GetRelativeSide(Sides.Top, side), RelativeSidePosition.Right));
 			cube.RotateSideCCW(Helper.GetRelativeSide(Sides.Top, side));
 		}
@@ -26,7 +27,7 @@ namespace RubiksCubeSolver.StartCrossMoves
 				out relativeSidePosition, out relativeEdgePosition);
 
 			RelativeSidePosition expectedSidePositon = Helper.GetRotationNeutralRelativeSidePosition(cube.Top, RelativeSidePosition.Right, Helper.ConvertRelativeSidePositionToRelativeEdgePosition(side));
-			RelativeEdgePosition expectedEdgePosition = RelativeEdgePosition.Bottom;
+			RelativeEdgePosition expectedEdgePosition = RelativeEdgePosition.Right;
 
 			if (relativeSidePosition == expectedSidePositon && relativeEdgePosition == expectedEdgePosition)
 				return 1;

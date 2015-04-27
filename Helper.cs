@@ -364,5 +364,18 @@ namespace RubiksCubeSolver
 
 			return RelativeEdgePosition.NotExisting;
 		}
+
+		/// <summary>
+		/// swaps top and bottom, leaves the other options as they are
+		/// </summary>
+		/// <param name="?"></param>
+		/// <returns></returns>
+		public static RelativeEdgePosition SwapTopBottom(RelativeEdgePosition startPosition)
+		{
+			if (startPosition == RelativeEdgePosition.Top) return RelativeEdgePosition.Bottom;
+			if (startPosition == RelativeEdgePosition.Bottom) return RelativeEdgePosition.Top;
+
+			return startPosition;
+		}
 	}
 }

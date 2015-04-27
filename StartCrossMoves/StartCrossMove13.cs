@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace RubiksCubeSolver.StartCrossMoves
 {
 	/// <summary>
-	/// on the left side, edge left
+	/// on the left side, edge bottom
 	/// </summary>
 	public class StartCrossMove13 : IStartCrossMove
 	{
