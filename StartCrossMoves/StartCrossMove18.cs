@@ -8,15 +8,18 @@ using System.Threading.Tasks;
 namespace RubiksCubeSolver.StartCrossMoves
 {
 	/// <summary>
-	/// represents the situation where the edge is on the opposite side, but adjacent to the correct color
-	/// opposite side, edge top
+	/// on the opposite side, edge bottom
 	/// </summary>
-	public class StartCrossMove1 : IStartCrossMove
+	public class StartCrossMove18 : IStartCrossMove
 	{
 		public void Apply(Cube cube, RelativeSidePosition side)
 		{
-			cube.RotateSideCW(Helper.GetRelativeSide(Sides.Top, side));
-			cube.RotateSideCW(Helper.GetRelativeSide(Sides.Top, side));
+			cube.RotateTopCW();
+			cube.RotateTopCW();
+			cube.RotateSideCW(Helper.GetRelativeSide(Helper.GetRelativeSide(Sides.Top, side), RelativeSidePosition.Opposite));
+			cube.RotateSideCW(Helper.GetRelativeSide(Helper.GetRelativeSide(Sides.Top, side), RelativeSidePosition.Opposite));
+			cube.RotateTopCW();
+			cube.RotateTopCW();
 		}
 
 		public double Applicable(Cube cube, RelativeSidePosition side)
@@ -26,9 +29,9 @@ namespace RubiksCubeSolver.StartCrossMoves
 			cube.GetRelativeEdgePosition(cube.Top.CubeSide, cube.Top.Color, cube.Top.GetRelativeSide(side).Color,
 				out relativeSidePosition, out relativeEdgePosition);
 
-			RelativeSidePosition expectedSidePositon = RelativeSidePosition.Opposite;
+			RelativeSidePosition expectedSidePositon = Helper.GetRotationNeutralRelativeSidePosition(cube.Top, RelativeSidePosition.Opposite, Helper.ConvertRelativeSidePositionToRelativeEdgePosition(side));
 			RelativeEdgePosition expectedEdgePosition = Helper.ConvertRelativeSidePositionToRelativeEdgePosition(side);
-			expectedEdgePosition = Helper.SwapTopBottom(expectedEdgePosition); //because on the opposite side bottom and top are inverted
+			expectedEdgePosition = Helper.SwapLeftRight(expectedEdgePosition);
 
 			if (relativeSidePosition == expectedSidePositon && relativeEdgePosition == expectedEdgePosition)
 				return 1;

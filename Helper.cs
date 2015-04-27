@@ -377,5 +377,18 @@ namespace RubiksCubeSolver
 
 			return startPosition;
 		}
+
+		/// <summary>
+		/// swaps left and right, leaves the other options as they are
+		/// </summary>
+		/// <param name="?"></param>
+		/// <returns></returns>
+		public static RelativeEdgePosition SwapLeftRight(RelativeEdgePosition startPosition)
+		{
+			if (startPosition == RelativeEdgePosition.Left) return RelativeEdgePosition.Right;
+			if (startPosition == RelativeEdgePosition.Right) return RelativeEdgePosition.Left;
+
+			return startPosition;
+		}
 	}
 }
