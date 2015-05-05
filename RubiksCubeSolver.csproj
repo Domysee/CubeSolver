@@ -86,6 +86,7 @@
     <Compile Include="StartCrossMoves\StartCrossMove2.cs" />
     <Compile Include="StartCrossMoves\StartCrossMove1.cs" />
     <Compile Include="Sides.cs" />
+    <Compile Include="Moves.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

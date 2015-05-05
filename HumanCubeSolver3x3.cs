@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RubiksCubeSolver
 {
-	class HumanCubeSolver3x3
+	public class HumanCubeSolver3x3
 	{
+		public void SolveTopCross()
+		{
+
+		}
 	}
 }
