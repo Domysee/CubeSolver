@@ -397,18 +397,7 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				MessageBox.Show(cube.IsTopCrossSolved().ToString());
-				var move = new StartCrossMove23();
-				foreach (RelativeSidePosition relativeSidePosition in Enum.GetValues(typeof(RelativeSidePosition)))
-				{
-					if (relativeSidePosition != RelativeSidePosition.NotExisting && 
-						relativeSidePosition != RelativeSidePosition.Self && 
-						relativeSidePosition != RelativeSidePosition.Opposite && 
-						move.Applicable(cube, relativeSidePosition) == 1)
-					{
-						move.Apply(cube, relativeSidePosition);
-					}
-				}
+				new HumanCubeSolver3x3().SolveTopCross(cube);
 				raiseAllPropertiesChanged();
 			});
 			randomize = new RelayCommand((param) =>

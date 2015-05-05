@@ -8,9 +8,19 @@ namespace RubiksCubeSolver
 {
 	public class HumanCubeSolver3x3
 	{
-		public void SolveTopCross()
+		private RelativeSidePosition[] relativeSidePositions = { RelativeSidePosition.Left, RelativeSidePosition.Top, RelativeSidePosition.Right, RelativeSidePosition.Bottom };
+		public void SolveTopCross(Cube cube)
 		{
-
+			while (!cube.IsTopCrossSolved())
+			{
+				foreach (var move in Moves.StartCrossMoves)
+				{
+					foreach (var relativeSidePosition in relativeSidePositions)
+					{
+						if (move.Applicable(cube, relativeSidePosition) == 1) move.Apply(cube, relativeSidePosition);
+					}
+				}
+			}
 		}
 	}
 }
