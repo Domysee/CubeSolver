@@ -54,19 +54,19 @@
             <Vector3DAnimation Storyboard.TargetName="RotationBack01" Storyboard.TargetProperty="Axis" To="0,1,0" Duration="0:0:0" />
             <Vector3DAnimation Storyboard.TargetName="RotationBack02" Storyboard.TargetProperty="Axis" To="0,1,0" Duration="0:0:0" />
 
-            <DoubleAnimation Storyboard.TargetName="TopRotation" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationLeft00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationLeft01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationLeft02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationRight00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationRight01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationRight02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationFront00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationFront01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationFront02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationBack00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationBack01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
-            <DoubleAnimation Storyboard.TargetName="RotationBack02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotation" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationLeft00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationLeft01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationLeft02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationRight00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationRight01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationRight02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
         </Storyboard>
     </Window.Resources>
     <Grid>
