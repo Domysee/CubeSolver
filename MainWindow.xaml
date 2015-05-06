@@ -3,8 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525" Background="Black">
     <Window.Resources>
-        <Storyboard x:Key="RotateTopCW">
+        <Storyboard x:Key="RotateTopCCW">
             <DoubleAnimation Storyboard.TargetName="TopRotation" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationLeft00" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationLeft01" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationLeft02" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" />
         </Storyboard>
     </Window.Resources>
     <Grid>
@@ -278,6 +281,13 @@
 
                             <Model3DGroup>
                                 <GeometryModel3D x:Name="Left00">
+                                    <GeometryModel3D.Transform>
+                                        <RotateTransform3D CenterX="1.5" CenterY="0" CenterZ="-1.5">
+                                            <RotateTransform3D.Rotation>
+                                                <AxisAngleRotation3D x:Name="TopRotationLeft00" Axis="0,1,0" Angle="0" />
+                                            </RotateTransform3D.Rotation>
+                                        </RotateTransform3D>
+                                    </GeometryModel3D.Transform>
                                     <GeometryModel3D.Material>
                                         <DiffuseMaterial Brush="{Binding Path=Left00}" />
                                     </GeometryModel3D.Material>
@@ -290,6 +300,13 @@
                                     </GeometryModel3D.Geometry>
                                 </GeometryModel3D>
                                 <GeometryModel3D x:Name="Left01">
+                                    <GeometryModel3D.Transform>
+                                        <RotateTransform3D CenterX="1.5" CenterY="0" CenterZ="-1.5">
+                                            <RotateTransform3D.Rotation>
+                                                <AxisAngleRotation3D x:Name="TopRotationLeft01" Axis="0,1,0" Angle="0" />
+                                            </RotateTransform3D.Rotation>
+                                        </RotateTransform3D>
+                                    </GeometryModel3D.Transform>
                                     <GeometryModel3D.Material>
                                         <DiffuseMaterial Brush="{Binding Path=Left01}" />
                                     </GeometryModel3D.Material>
@@ -302,6 +319,13 @@
                                     </GeometryModel3D.Geometry>
                                 </GeometryModel3D>
                                 <GeometryModel3D x:Name="Left02">
+                                    <GeometryModel3D.Transform>
+                                        <RotateTransform3D CenterX="1.5" CenterY="0" CenterZ="-1.5">
+                                            <RotateTransform3D.Rotation>
+                                                <AxisAngleRotation3D x:Name="TopRotationLeft02" Axis="0,1,0" Angle="0" />
+                                            </RotateTransform3D.Rotation>
+                                        </RotateTransform3D>
+                                    </GeometryModel3D.Transform>
                                     <GeometryModel3D.Material>
                                         <DiffuseMaterial Brush="{Binding Path=Left02}" />
                                     </GeometryModel3D.Material>
