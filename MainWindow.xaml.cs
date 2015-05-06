@@ -34,7 +34,7 @@ namespace RubiksCubeSolver
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			(this.Resources["RotateLeftCW"] as Storyboard).Begin();
+			(this.Resources["RotateFrontCW"] as Storyboard).Begin();
 		}
 	}
 }
