@@ -2,9 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525" Background="Black">
+    <Window.Resources>
+        <Storyboard x:Key="RotateTopCW">
+            <DoubleAnimation Storyboard.TargetName="TopRotation" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" />
+        </Storyboard>
+    </Window.Resources>
     <Grid>
         <StackPanel>
-            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=Test}">Test</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=Test}">Test1</Button>
+            <RepeatButton Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">Test2</RepeatButton>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionL}">L</Button>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionLi}">Li</Button>
             <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionR}">R</Button>
@@ -153,6 +159,13 @@
                             </Model3DGroup>
 
                             <Model3DGroup>
+                                <Model3DGroup.Transform>
+                                    <RotateTransform3D CenterX="1.5" CenterY="0" CenterZ="-1.5">
+                                        <RotateTransform3D.Rotation>
+                                            <AxisAngleRotation3D x:Name="TopRotation" Axis="0,1,0" Angle="0" />
+                                        </RotateTransform3D.Rotation>
+                                    </RotateTransform3D>
+                                </Model3DGroup.Transform>
                                 <GeometryModel3D x:Name="Top00">
                                     <GeometryModel3D.Material>
                                         <DiffuseMaterial Brush="{Binding Path=Top00}" />
