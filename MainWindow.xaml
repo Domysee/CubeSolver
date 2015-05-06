@@ -3,6 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525" Background="Black">
     <Window.Resources>
+        <Storyboard x:Key="RotateTopCW">
+            <DoubleAnimation Storyboard.TargetName="TopRotation" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationLeft00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationLeft01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationLeft02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationRight00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationRight01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationRight02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationFront00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationFront01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationFront02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationBack00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationBack01" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="TopRotationBack02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" />
+        </Storyboard>
         <Storyboard x:Key="RotateTopCCW">
             <DoubleAnimation Storyboard.TargetName="TopRotation" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" />
             <DoubleAnimation Storyboard.TargetName="TopRotationLeft00" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" />
