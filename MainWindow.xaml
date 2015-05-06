@@ -592,6 +592,71 @@
             <DoubleAnimation Storyboard.TargetName="RotationBottom12" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" FillBehavior="Stop" />
             <DoubleAnimation Storyboard.TargetName="RotationBottom22" Storyboard.TargetProperty="Angle" From="0" To="90" Duration="0:0:1" FillBehavior="Stop" />
         </Storyboard>
+        <Storyboard x:Key="RotateRightCW">
+            <DoubleAnimation Storyboard.TargetName="RotationBack00Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack00Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack00Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack10Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack10Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack10Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack20Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack20Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack20Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop02Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop02Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop02Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop12Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop12Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop12Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop22Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop22Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop22Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront02Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront02Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront02Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront12Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront12Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront12Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront22Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront22Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront22Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom02Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom02Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom02Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom12Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom12Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom12Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom22Transform" Storyboard.TargetProperty="CenterX" To="0" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom22Transform" Storyboard.TargetProperty="CenterY" To="-1.5" Duration="0:0:0" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom22Transform" Storyboard.TargetProperty="CenterZ" To="-1.5" Duration="0:0:0" />
+
+            <Vector3DAnimation Storyboard.TargetName="RotationBack00" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationBack10" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationBack20" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationTop02" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationTop12" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationTop22" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationFront02" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationFront12" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationFront22" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationBottom02" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationBottom12" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+            <Vector3DAnimation Storyboard.TargetName="RotationBottom22" Storyboard.TargetProperty="Axis" To="1,0,0" Duration="0:0:0" />
+
+            <DoubleAnimation Storyboard.TargetName="RightRotation" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack00" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack10" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBack20" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop12" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationTop22" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront12" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationFront22" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom02" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom12" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+            <DoubleAnimation Storyboard.TargetName="RotationBottom22" Storyboard.TargetProperty="Angle" From="0" To="-90" Duration="0:0:1" FillBehavior="Stop" />
+        </Storyboard>
     </Window.Resources>
 	<Grid>
 		<StackPanel>
