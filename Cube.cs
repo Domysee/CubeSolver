@@ -184,7 +184,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateFrontCW() 
 		{
-			raiseBeforeCubeFrontCWRotation();
+			raiseBeforeFrontCWRotation();
 			var tempRow = top.GetRow(2);
 			top.SetRow(2, left.GetColumn(2).Reverse().ToArray());
 			left.SetColumn(2, bottom.GetRow(0));
@@ -198,6 +198,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateFrontCCW()
 		{
+			raiseBeforeFrontCCWRotation();
 			var tempRow = top.GetRow(2);
 			top.SetRow(2, right.GetColumn(0));
 			right.SetColumn(0, bottom.GetRow(0).Reverse().ToArray());
@@ -211,6 +212,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBackCW()
 		{
+			raiseBeforeBackCWRotation();
 			var tempRow = top.GetRow(0);
 			top.SetRow(0, right.GetColumn(2));
 			right.SetColumn(2, bottom.GetRow(2).Reverse().ToArray());
@@ -224,6 +226,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBackCCW()
 		{
+			raiseBeforeBackCCWRotation();
 			var tempRow = top.GetRow(0);
 			top.SetRow(0, left.GetColumn(0).Reverse().ToArray());
 			left.SetColumn(0, bottom.GetRow(2));
@@ -237,6 +240,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateLeftCW()
 		{
+			raiseBeforeLeftCWRotation();
 			var tempColumn = top.GetColumn(0);
 			top.SetColumn(0, back.GetColumn(2).Reverse().ToArray());
 			back.SetColumn(2, bottom.GetColumn(0).Reverse().ToArray());
@@ -250,6 +254,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateLeftCCW()
 		{
+			raiseBeforeLeftCCWRotation();
 			var tempColumn = top.GetColumn(0);
 			top.SetColumn(0, front.GetColumn(0));
 			front.SetColumn(0, bottom.GetColumn(0));
@@ -263,6 +268,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateRightCW()
 		{
+			raiseBeforeRightCWRotation();
 			var tempColumn = top.GetColumn(2);
 			top.SetColumn(2, front.GetColumn(2));
 			front.SetColumn(2, bottom.GetColumn(2));
@@ -276,6 +282,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateRightCCW()
 		{
+			raiseBeforeRightCCWRotation();
 			var tempColumn = top.GetColumn(2);
 			top.SetColumn(2, back.GetColumn(0).Reverse().ToArray());
 			back.SetColumn(0, bottom.GetColumn(2).Reverse().ToArray());
@@ -289,6 +296,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateTopCW()
 		{
+			raiseBeforeTopCWRotation();
 			var tempRow = front.GetRow(0);
 			front.SetRow(0, right.GetRow(0));
 			right.SetRow(0, back.GetRow(0));
@@ -302,6 +310,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateTopCCW()
 		{
+			raiseBeforeTopCCWRotation();
 			var tempRow = front.GetRow(0);
 			front.SetRow(0, left.GetRow(0));
 			left.SetRow(0, back.GetRow(0));
@@ -315,6 +324,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBottomCW()
 		{
+			raiseBeforeBottomCWRotation();
 			var tempRow = front.GetRow(2);
 			front.SetRow(2, left.GetRow(2));
 			left.SetRow(2, back.GetRow(2));
@@ -328,6 +338,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateBottomCCW()
 		{
+			raiseBeforeBottomCCWRotation();
 			var tempRow = front.GetRow(2);
 			front.SetRow(2, right.GetRow(2));
 			right.SetRow(2, back.GetRow(2));
