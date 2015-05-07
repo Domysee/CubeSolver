@@ -53,6 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AiCubeSolver.cs" />
     <Compile Include="CubeRandomizer.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HumanCubeSolver3x3.cs" />
