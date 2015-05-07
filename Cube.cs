@@ -116,6 +116,68 @@ namespace RubiksCubeSolver
 		{
 			if (BeforeBottomCCWRotation != null) BeforeBottomCCWRotation(this, new EventArgs());
 		}
+
+		public event EventHandler AfterLeftCWRotation;
+		public event EventHandler AfterLeftCCWRotation;
+		public event EventHandler AfterRightCWRotation;
+		public event EventHandler AfterRightCCWRotation;
+		public event EventHandler AfterFrontCWRotation;
+		public event EventHandler AfterFrontCCWRotation;
+		public event EventHandler AfterBackCWRotation;
+		public event EventHandler AfterBackCCWRotation;
+		public event EventHandler AfterTopCWRotation;
+		public event EventHandler AfterTopCCWRotation;
+		public event EventHandler AfterBottomCWRotation;
+		public event EventHandler AfterBottomCCWRotation;
+
+		private void raiseAfterLeftCWRotation()
+		{
+			if (AfterLeftCWRotation != null) AfterLeftCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterLeftCCWRotation()
+		{
+			if (AfterLeftCCWRotation != null) AfterLeftCCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterRightCWRotation()
+		{
+			if (AfterRightCWRotation != null) AfterRightCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterRightCCWRotation()
+		{
+			if (AfterRightCCWRotation != null) AfterRightCCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterFrontCWRotation()
+		{
+			if (AfterFrontCWRotation != null) AfterFrontCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterFrontCCWRotation()
+		{
+			if (AfterFrontCCWRotation != null) AfterFrontCCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterBackCWRotation()
+		{
+			if (AfterBackCWRotation != null) AfterBackCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterBackCCWRotation()
+		{
+			if (AfterBackCCWRotation != null) AfterBackCCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterTopCWRotation()
+		{
+			if (AfterTopCWRotation != null) AfterTopCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterTopCCWRotation()
+		{
+			if (AfterTopCCWRotation != null) AfterTopCCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterBottomCWRotation()
+		{
+			if (AfterBottomCWRotation != null) AfterBottomCWRotation(this, new EventArgs());
+		}
+		private void raiseAfterBottomCCWRotation()
+		{
+			if (AfterBottomCCWRotation != null) AfterBottomCCWRotation(this, new EventArgs());
+		}
 		#endregion
 
 		public Cube()
@@ -216,9 +278,9 @@ namespace RubiksCubeSolver
 		/// <summary>
 		/// B
 		/// </summary>
-		public async Task RotateBackCWAsync()
+		public void RotateBackCWAsync()
 		{
-			await Task.Run(() =>
+			Task.Run(() =>
 			{
 				raiseBeforeBackCWRotation();
 				var tempRow = top.GetRow(0);
@@ -227,6 +289,7 @@ namespace RubiksCubeSolver
 				bottom.SetRow(2, left.GetColumn(0));
 				left.SetColumn(0, tempRow.Reverse().ToArray());
 				back.RotateCW();
+				raiseAfterBackCWRotation();
 			});
 		}
 

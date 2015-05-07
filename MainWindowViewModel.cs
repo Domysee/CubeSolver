@@ -453,7 +453,24 @@ namespace RubiksCubeSolver
 		public MainWindowViewModel()
 		{
 			cube = new Cube();
+			cube.AfterBackCWRotation += cube_AfterRotation;
+			cube.AfterBackCCWRotation += cube_AfterRotation;
+			cube.AfterFrontCWRotation += cube_AfterRotation;
+			cube.AfterFrontCCWRotation += cube_AfterRotation;
+			cube.AfterTopCWRotation += cube_AfterRotation;
+			cube.AfterTopCCWRotation += cube_AfterRotation;
+			cube.AfterBottomCWRotation += cube_AfterRotation;
+			cube.AfterBottomCCWRotation += cube_AfterRotation;
+			cube.AfterLeftCWRotation += cube_AfterRotation;
+			cube.AfterLeftCCWRotation += cube_AfterRotation;
+			cube.AfterRightCWRotation += cube_AfterRotation;
+			cube.AfterRightCCWRotation += cube_AfterRotation;
 			initializeCommands();
+		}
+
+		void cube_AfterRotation(object sender, EventArgs e)
+		{
+			raiseAllPropertiesChanged();
 		}
 
 		private void initializeCommands()
@@ -468,10 +485,9 @@ namespace RubiksCubeSolver
 				new CubeRandomizer().DoRandomTurns(cube);
 				raiseAllPropertiesChanged();
 			});
-			actionB = new RelayCommand(async (param) =>
+			actionB = new RelayCommand((param) =>
 			{
-				await cube.RotateBackCWAsync();
-				raiseAllPropertiesChanged();
+				cube.RotateBackCWAsync();
 			});
 			actionBi = new RelayCommand((param) =>
 			{
