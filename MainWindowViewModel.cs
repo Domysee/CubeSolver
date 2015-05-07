@@ -488,51 +488,51 @@ namespace RubiksCubeSolver
 			});
 			actionB = new RelayCommand((param) =>
 			{
-				cube.RotateBackCW();
+				cube.RotateBackCWAsync();
 			});
 			actionBi = new RelayCommand((param) =>
 			{
-				cube.RotateBackCCW();
+				cube.RotateBackCCWAsync();
 			});
 			actionF = new RelayCommand((param) =>
 			{
-				cube.RotateFrontCW();
+				cube.RotateFrontCWAsync();
 			});
 			actionFi = new RelayCommand((param) =>
 			{
-				cube.RotateFrontCCW();
+				cube.RotateFrontCCWAsync();
 			});
 			actionL = new RelayCommand((param) =>
 			{
-				cube.RotateLeftCW();
+				cube.RotateLeftCWAsync();
 			});
 			actionLi = new RelayCommand((param) =>
 			{
-				cube.RotateLeftCCW();
+				cube.RotateLeftCCWAsync();
 			});
 			actionR = new RelayCommand((param) =>
 			{
-				cube.RotateRightCW();
+				cube.RotateRightCWAsync();
 			});
 			actionRi = new RelayCommand((param) =>
 			{
-				cube.RotateRightCCW();
+				cube.RotateRightCCWAsync();
 			});
 			actionU = new RelayCommand((param) =>
 			{
-				cube.RotateTopCW();
+				cube.RotateTopCWAsync();
 			});
 			actionUi = new RelayCommand((param) =>
 			{
-				cube.RotateTopCCW();
+				cube.RotateTopCCWAsync();
 			});
 			actionD = new RelayCommand((param) =>
 			{
-				cube.RotateBottomCW();
+				cube.RotateBottomCWAsync();
 			});
 			actionDi = new RelayCommand((param) =>
 			{
-				cube.RotateBottomCCW();
+				cube.RotateBottomCCWAsync();
 			});
 		}
 	}
