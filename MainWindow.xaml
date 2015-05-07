@@ -3,7 +3,7 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		Title="MainWindow" Height="350" Width="525" Background="Black">
 	<Window.Resources>
-		<Duration x:Key="RotationDuration">0:0:0.5</Duration>
+		<Duration x:Key="RotationDuration">0:0:0.2</Duration>
 		<Storyboard x:Key="RotateTopCW" Completed="Storyboard_Completed">
 			<DoubleAnimation Storyboard.TargetName="RotationLeft00Transform" Storyboard.TargetProperty="CenterX" To="1.5" Duration="0:0:0" />
 			<DoubleAnimation Storyboard.TargetName="RotationLeft00Transform" Storyboard.TargetProperty="CenterY" To="0" Duration="0:0:0" />

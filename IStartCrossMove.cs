@@ -22,9 +22,9 @@ namespace RubiksCubeSolver
 
 		/// <summary>
 		/// returns a applicability factor 
-		/// 1 = this move will solve the cube
-		/// 0 = this move will unsolve the cube
-		/// 0.5 = this move will do nothing
+		/// 1 = this move will do what it is supposed to do
+		/// 0 = this move has a negative effect
+		/// 0.5 = this move will do nothing				
 		/// The startside of the cube and the given side define on which edge piece the applicability is measured
 		/// </summary>
 		/// <param name="cube"></param>
