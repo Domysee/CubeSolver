@@ -116,6 +116,7 @@ namespace RubiksCubeSolver
 			return Task.Run(() =>
 			{
 				while (!animationCompleted) Task.Delay(10);
+				animationCompleted = false;
 			});
 		}
 
