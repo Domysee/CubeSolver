@@ -176,13 +176,19 @@ namespace RubiksCubeSolver
 		/// 
 		/// the notations in the method are marked according to this page: 
 		/// https://rubiks.com/uploads/general_content/Rubiks_cube_3x3_solution-en.pdf
+		/// 
+		/// the rotations need to run in separate threads, because otherwise they would run in the UI thread
+		/// but because the events have to await until the storyboard finished, the rotation method's execution continues 
+		/// so basically there is no way to wait until the rotation is finished in the UI for the rest of the methods to continue
+		/// therefore they have to run in a second thread, so that the event also runs in a second thread
+		/// the event handler can then synchronously wait for a task executed with the dispatcher to finish
 		/// </summary>
 
 
 		/// <summary>
 		/// F
 		/// </summary>
-		public void RotateFrontCW() 
+		public void RotateFrontCW()
 		{
 			raiseBeforeFrontCWRotation();
 			var tempRow = top.GetRow(2);
@@ -210,15 +216,18 @@ namespace RubiksCubeSolver
 		/// <summary>
 		/// B
 		/// </summary>
-		public void RotateBackCW()
+		public async Task RotateBackCWAsync()
 		{
-			raiseBeforeBackCWRotation();
-			var tempRow = top.GetRow(0);
-			top.SetRow(0, right.GetColumn(2));
-			right.SetColumn(2, bottom.GetRow(2).Reverse().ToArray());
-			bottom.SetRow(2, left.GetColumn(0));
-			left.SetColumn(0, tempRow.Reverse().ToArray());
-			back.RotateCW();
+			await Task.Run(() =>
+			{
+				raiseBeforeBackCWRotation();
+				var tempRow = top.GetRow(0);
+				top.SetRow(0, right.GetColumn(2));
+				right.SetColumn(2, bottom.GetRow(2).Reverse().ToArray());
+				bottom.SetRow(2, left.GetColumn(0));
+				left.SetColumn(0, tempRow.Reverse().ToArray());
+				back.RotateCW();
+			});
 		}
 
 		/// <summary>
@@ -302,7 +311,7 @@ namespace RubiksCubeSolver
 			right.SetRow(0, back.GetRow(0));
 			back.SetRow(0, left.GetRow(0));
 			left.SetRow(0, tempRow);
-			top.RotateCW();			
+			top.RotateCW();
 		}
 
 		/// <summary>
@@ -350,7 +359,7 @@ namespace RubiksCubeSolver
 		public void RotateSideCW(Sides side)
 		{
 			if (side == Sides.Back)
-				RotateBackCW();
+				RotateBackCWAsync();
 			if (side == Sides.Front)
 				RotateFrontCW();
 			if (side == Sides.Left)
@@ -388,7 +397,7 @@ namespace RubiksCubeSolver
 		/// <param name="secondaryColor"></param>
 		/// <param name="relativeSidePosition">contains the relative side to the startSide</param>
 		/// <param name="relativeEdgePosition">contains the edge relative to the relative side</param>
-		public void GetRelativeEdgePosition(Sides startSide, Brush primaryColor, Brush secondaryColor, 
+		public void GetRelativeEdgePosition(Sides startSide, Brush primaryColor, Brush secondaryColor,
 			out RelativeSidePosition relativeSidePosition, out RelativeEdgePosition relativeEdgePosition)
 		{
 			//default to satisfy the compiler, should never occur

@@ -44,7 +44,7 @@ namespace RubiksCubeSolver
 					cube.RotateBackCCW();
 					break;
 				case 1:
-					cube.RotateBackCW();
+					cube.RotateBackCWAsync();
 					break;
 				case 2:
 					cube.RotateBottomCCW();

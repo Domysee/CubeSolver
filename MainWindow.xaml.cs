@@ -94,11 +94,14 @@ namespace RubiksCubeSolver
 			throw new NotImplementedException();
 		}
 
-		private async void viewmodel_BeforeCubeBackCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeBackCWRotation(object sender, EventArgs e)
 		{
-			var animation = this.Resources["RotateBackCW"] as Storyboard;
-			animation.Begin();
-			await waitUntilAnimationCompletion();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateBackCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
 		private async void viewmodel_BeforeCubeBackCCWRotation(object sender, EventArgs e)
@@ -121,7 +124,7 @@ namespace RubiksCubeSolver
 			animationCompleted = true;
 		}
 
-		private async void Button_Click(object sender, RoutedEventArgs e)
+		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 		}
 	}

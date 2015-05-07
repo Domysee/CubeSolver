@@ -446,12 +446,12 @@ namespace RubiksCubeSolver
 		public event EventHandler BeforeCubeBottomCCWRotation
 		{
 			add { cube.BeforeBottomCCWRotation += value; }
-			remove{ cube.BeforeBottomCCWRotation -= value; }
+			remove { cube.BeforeBottomCCWRotation -= value; }
 		}
 		#endregion
 
 		public MainWindowViewModel()
-		{		
+		{
 			cube = new Cube();
 			initializeCommands();
 		}
@@ -468,9 +468,9 @@ namespace RubiksCubeSolver
 				new CubeRandomizer().DoRandomTurns(cube);
 				raiseAllPropertiesChanged();
 			});
-			actionB = new RelayCommand((param) =>
+			actionB = new RelayCommand(async (param) =>
 			{
-				cube.RotateBackCW();
+				await cube.RotateBackCWAsync();
 				raiseAllPropertiesChanged();
 			});
 			actionBi = new RelayCommand((param) =>
