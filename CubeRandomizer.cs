@@ -41,40 +41,40 @@ namespace RubiksCubeSolver
 			switch (turnId)
 			{
 				case 0:
-					cube.RotateBackCCW();
+					cube.RotateBackCCWAsync().Wait();
 					break;
 				case 1:
-					cube.RotateBackCW();
+					cube.RotateBackCWAsync().Wait();
 					break;
 				case 2:
-					cube.RotateBottomCCW();
+					cube.RotateBottomCCWAsync().Wait();
 					break;
 				case 3:
-					cube.RotateBottomCW();
+					cube.RotateBottomCWAsync().Wait();
 					break;
 				case 4:
-					cube.RotateFrontCCW();
+					cube.RotateFrontCCWAsync().Wait();
 					break;
 				case 5:
-					cube.RotateFrontCW();
+					cube.RotateFrontCWAsync().Wait();
 					break;
 				case 6:
-					cube.RotateLeftCCW();
+					cube.RotateLeftCCWAsync().Wait();
 					break;
 				case 7:
-					cube.RotateLeftCW();
+					cube.RotateLeftCWAsync().Wait();
 					break;
 				case 8:
-					cube.RotateRightCCW();
+					cube.RotateRightCCWAsync().Wait();
 					break;
 				case 9:
-					cube.RotateRightCW();
+					cube.RotateRightCWAsync().Wait();
 					break;
 				case 10:
-					cube.RotateTopCCW();
+					cube.RotateTopCCWAsync().Wait();
 					break;
 				case 11:
-					cube.RotateTopCW();
+					cube.RotateTopCWAsync().Wait();
 					break;
 			}
 		}

@@ -481,7 +481,10 @@ namespace RubiksCubeSolver
 			});
 			randomize = new RelayCommand((param) =>
 			{
-				new CubeRandomizer().DoRandomTurns(cube);
+				Task.Run(() =>
+				{
+					new CubeRandomizer().DoRandomTurns(cube);
+				});
 			});
 			actionB = new RelayCommand((param) =>
 			{
