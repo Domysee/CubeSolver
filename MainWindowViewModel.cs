@@ -478,12 +478,10 @@ namespace RubiksCubeSolver
 			test = new RelayCommand((param) =>
 			{
 				new HumanCubeSolver3x3().SolveTopCross(cube);
-				raiseAllPropertiesChanged();
 			});
 			randomize = new RelayCommand((param) =>
 			{
 				new CubeRandomizer().DoRandomTurns(cube);
-				raiseAllPropertiesChanged();
 			});
 			actionB = new RelayCommand((param) =>
 			{
@@ -492,57 +490,46 @@ namespace RubiksCubeSolver
 			actionBi = new RelayCommand((param) =>
 			{
 				cube.RotateBackCCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionF = new RelayCommand((param) =>
 			{
 				cube.RotateFrontCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionFi = new RelayCommand((param) =>
 			{
 				cube.RotateFrontCCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionL = new RelayCommand((param) =>
 			{
 				cube.RotateLeftCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionLi = new RelayCommand((param) =>
 			{
 				cube.RotateLeftCCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionR = new RelayCommand((param) =>
 			{
 				cube.RotateRightCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionRi = new RelayCommand((param) =>
 			{
 				cube.RotateRightCCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionU = new RelayCommand((param) =>
 			{
 				cube.RotateTopCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionUi = new RelayCommand((param) =>
 			{
 				cube.RotateTopCCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionD = new RelayCommand((param) =>
 			{
 				cube.RotateBottomCW();
-				raiseAllPropertiesChanged();
-			});
+							});
 			actionDi = new RelayCommand((param) =>
 			{
 				cube.RotateBottomCCW();
-				raiseAllPropertiesChanged();
 			});
 		}
 	}
