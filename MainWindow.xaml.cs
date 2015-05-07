@@ -29,12 +29,100 @@ namespace RubiksCubeSolver
 			InitializeComponent();
 
 			viewmodel = new MainWindowViewModel();
+			viewmodel.BeforeCubeBackCCWRotation += viewmodel_BeforeCubeBackCCWRotation;
+			viewmodel.BeforeCubeBackCWRotation += viewmodel_BeforeCubeBackCWRotation;
+			viewmodel.BeforeCubeBottomCCWRotation += viewmodel_BeforeCubeBottomCCWRotation;
+			viewmodel.BeforeCubeBottomCWRotation += viewmodel_BeforeCubeBottomCWRotation;
+			viewmodel.BeforeCubeFrontCCWRotation += viewmodel_BeforeCubeFrontCCWRotation;
+			viewmodel.BeforeCubeFrontCWRotation += viewmodel_BeforeCubeFrontCWRotation;
+			viewmodel.BeforeCubeLeftCCWRotation += viewmodel_BeforeCubeLeftCCWRotation;
+			viewmodel.BeforeCubeLeftCWRotation += viewmodel_BeforeCubeLeftCWRotation;
+			viewmodel.BeforeCubeRightCCWRotation += viewmodel_BeforeCubeRightCCWRotation;
+			viewmodel.BeforeCubeRightCWRotation += viewmodel_BeforeCubeRightCWRotation;
+			viewmodel.BeforeCubeTopCCWRotation += viewmodel_BeforeCubeTopCCWRotation;
+			viewmodel.BeforeCubeTopCWRotation += viewmodel_BeforeCubeTopCWRotation;
 			this.DataContext = viewmodel;
 		}
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private async void viewmodel_BeforeCubeTopCWRotation(object sender, EventArgs e)
 		{
-			(this.Resources["RotateBackCW"] as Storyboard).Begin();
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeTopCCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeRightCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeRightCCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeLeftCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeLeftCCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeFrontCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeFrontCCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeBottomCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeBottomCCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private async void viewmodel_BeforeCubeBackCWRotation(object sender, EventArgs e)
+		{
+			var animation = this.Resources["RotateBackCW"] as Storyboard;
+			animation.Begin();
+			await waitUntilAnimationCompletion();
+		}
+
+		private async void viewmodel_BeforeCubeBackCCWRotation(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private bool animationCompleted = false;
+
+		private Task waitUntilAnimationCompletion()
+		{
+			return Task.Run(() =>
+			{
+				while (!animationCompleted) Task.Delay(10);
+			});
+		}
+
+		private void Storyboard_Completed(object sender, EventArgs e)
+		{
+			animationCompleted = true;
+		}
+
+		private async void Button_Click(object sender, RoutedEventArgs e)
+		{
 		}
 	}
 }
