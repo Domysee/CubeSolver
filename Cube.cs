@@ -54,6 +54,7 @@ namespace RubiksCubeSolver
 		}
 		#endregion
 
+		#region Events
 		public event EventHandler BeforeCubeLeftCWRotation;
 		public event EventHandler BeforeCubeLeftCCWRotation;
 		public event EventHandler BeforeCubeRightCWRotation;
@@ -67,54 +68,55 @@ namespace RubiksCubeSolver
 		public event EventHandler BeforeCubeBottomCWRotation;
 		public event EventHandler BeforeCubeBottomCCWRotation;
 
-		private void RaiseBeforeCubeLeftCWRotation()
+		private void raiseBeforeCubeLeftCWRotation()
 		{
 			if (BeforeCubeLeftCWRotation != null) BeforeCubeLeftCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeLeftCCWRotation()
+		private void raiseBeforeCubeLeftCCWRotation()
 		{
 			if (BeforeCubeLeftCCWRotation != null) BeforeCubeLeftCCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeRightCWRotation()
+		private void raiseBeforeCubeRightCWRotation()
 		{
 			if (BeforeCubeRightCWRotation != null) BeforeCubeRightCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeRightCCWRotation()
+		private void raiseBeforeCubeRightCCWRotation()
 		{
 			if (BeforeCubeRightCCWRotation != null) BeforeCubeRightCCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeFrontCWRotation()
+		private void raiseBeforeCubeFrontCWRotation()
 		{
 			if (BeforeCubeFrontCWRotation != null) BeforeCubeFrontCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeFrontCCWRotation()
+		private void raiseBeforeCubeFrontCCWRotation()
 		{
 			if (BeforeCubeFrontCCWRotation != null) BeforeCubeFrontCCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeBackCWRotation()
+		private void raiseBeforeCubeBackCWRotation()
 		{
 			if (BeforeCubeBackCWRotation != null) BeforeCubeBackCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeBackCCWRotation()
+		private void raiseBeforeCubeBackCCWRotation()
 		{
 			if (BeforeCubeBackCCWRotation != null) BeforeCubeBackCCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeTopCWRotation()
+		private void raiseBeforeCubeTopCWRotation()
 		{
 			if (BeforeCubeTopCWRotation != null) BeforeCubeTopCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeTopCCWRotation()
+		private void raiseBeforeCubeTopCCWRotation()
 		{
 			if (BeforeCubeTopCCWRotation != null) BeforeCubeTopCCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeBottomCWRotation()
+		private void raiseBeforeCubeBottomCWRotation()
 		{
 			if (BeforeCubeBottomCWRotation != null) BeforeCubeBottomCWRotation(this, new EventArgs());
 		}
-		private void RaiseBeforeCubeBottomCCWRotation()
+		private void raiseBeforeCubeBottomCCWRotation()
 		{
 			if (BeforeCubeBottomCCWRotation != null) BeforeCubeBottomCCWRotation(this, new EventArgs());
 		}
+		#endregion
 
 		public Cube()
 		{
@@ -182,6 +184,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		public void RotateFrontCW() 
 		{
+			
 			var tempRow = top.GetRow(2);
 			top.SetRow(2, left.GetColumn(2).Reverse().ToArray());
 			left.SetColumn(2, bottom.GetRow(0));
