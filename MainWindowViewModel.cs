@@ -477,7 +477,10 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				new HumanCubeSolver3x3().SolveTopCross(cube);
+				Task.Run(() =>
+				{
+					new HumanCubeSolver3x3().SolveTopCross(cube);
+				});
 			});
 			randomize = new RelayCommand((param) =>
 			{
