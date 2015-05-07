@@ -54,6 +54,68 @@ namespace RubiksCubeSolver
 		}
 		#endregion
 
+		public event EventHandler BeforeCubeLeftCWRotation;
+		public event EventHandler BeforeCubeLeftCCWRotation;
+		public event EventHandler BeforeCubeRightCWRotation;
+		public event EventHandler BeforeCubeRightCCWRotation;
+		public event EventHandler BeforeCubeFrontCWRotation;
+		public event EventHandler BeforeCubeFrontCCWRotation;
+		public event EventHandler BeforeCubeBackCWRotation;
+		public event EventHandler BeforeCubeBackCCWRotation;
+		public event EventHandler BeforeCubeTopCWRotation;
+		public event EventHandler BeforeCubeTopCCWRotation;
+		public event EventHandler BeforeCubeBottomCWRotation;
+		public event EventHandler BeforeCubeBottomCCWRotation;
+
+		private void RaiseBeforeCubeLeftCWRotation()
+		{
+			if (BeforeCubeLeftCWRotation != null) BeforeCubeLeftCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeLeftCCWRotation()
+		{
+			if (BeforeCubeLeftCCWRotation != null) BeforeCubeLeftCCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeRightCWRotation()
+		{
+			if (BeforeCubeRightCWRotation != null) BeforeCubeRightCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeRightCCWRotation()
+		{
+			if (BeforeCubeRightCCWRotation != null) BeforeCubeRightCCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeFrontCWRotation()
+		{
+			if (BeforeCubeFrontCWRotation != null) BeforeCubeFrontCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeFrontCCWRotation()
+		{
+			if (BeforeCubeFrontCCWRotation != null) BeforeCubeFrontCCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeBackCWRotation()
+		{
+			if (BeforeCubeBackCWRotation != null) BeforeCubeBackCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeBackCCWRotation()
+		{
+			if (BeforeCubeBackCCWRotation != null) BeforeCubeBackCCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeTopCWRotation()
+		{
+			if (BeforeCubeTopCWRotation != null) BeforeCubeTopCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeTopCCWRotation()
+		{
+			if (BeforeCubeTopCCWRotation != null) BeforeCubeTopCCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeBottomCWRotation()
+		{
+			if (BeforeCubeBottomCWRotation != null) BeforeCubeBottomCWRotation(this, new EventArgs());
+		}
+		private void RaiseBeforeCubeBottomCCWRotation()
+		{
+			if (BeforeCubeBottomCCWRotation != null) BeforeCubeBottomCCWRotation(this, new EventArgs());
+		}
+
 		public Cube()
 		{
 			front = new Side(Brushes.Blue, Sides.Front);
