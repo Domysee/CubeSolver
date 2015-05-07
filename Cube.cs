@@ -463,6 +463,222 @@ namespace RubiksCubeSolver
 			});
 		}
 
+		/// <summary>
+		/// F
+		/// </summary>
+		public async Task RotateFrontCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeFrontCWRotation();
+				var tempRow = top.GetRow(2);
+				top.SetRow(2, left.GetColumn(2).Reverse().ToArray());
+				left.SetColumn(2, bottom.GetRow(0));
+				bottom.SetRow(0, right.GetColumn(0).Reverse().ToArray());
+				right.SetColumn(0, tempRow);
+				front.RotateCW();
+				raiseAfterFrontCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// Fi
+		/// </summary>
+		public async Task RotateFrontCCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeFrontCCWRotation();
+				var tempRow = top.GetRow(2);
+				top.SetRow(2, right.GetColumn(0));
+				right.SetColumn(0, bottom.GetRow(0).Reverse().ToArray());
+				bottom.SetRow(0, left.GetColumn(2));
+				left.SetColumn(2, tempRow.Reverse().ToArray());
+				front.RotateCCW();
+				raiseAfterFrontCCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// B
+		/// </summary>
+		public async Task RotateBackCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeBackCWRotation();
+				var tempRow = top.GetRow(0);
+				top.SetRow(0, right.GetColumn(2));
+				right.SetColumn(2, bottom.GetRow(2).Reverse().ToArray());
+				bottom.SetRow(2, left.GetColumn(0));
+				left.SetColumn(0, tempRow.Reverse().ToArray());
+				back.RotateCW();
+				raiseAfterBackCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// Bi
+		/// </summary>
+		public async Task RotateBackCCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeBackCCWRotation();
+				var tempRow = top.GetRow(0);
+				top.SetRow(0, left.GetColumn(0).Reverse().ToArray());
+				left.SetColumn(0, bottom.GetRow(2));
+				bottom.SetRow(2, right.GetColumn(2).Reverse().ToArray());
+				right.SetColumn(2, tempRow);
+				back.RotateCCW();
+				raiseAfterBackCCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// L
+		/// </summary>
+		public async Task RotateLeftCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeLeftCWRotation();
+				var tempColumn = top.GetColumn(0);
+				top.SetColumn(0, back.GetColumn(2).Reverse().ToArray());
+				back.SetColumn(2, bottom.GetColumn(0).Reverse().ToArray());
+				bottom.SetColumn(0, front.GetColumn(0));
+				front.SetColumn(0, tempColumn);
+				left.RotateCW();
+				raiseAfterLeftCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// Li
+		/// </summary>
+		public async Task RotateLeftCCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeLeftCCWRotation();
+				var tempColumn = top.GetColumn(0);
+				top.SetColumn(0, front.GetColumn(0));
+				front.SetColumn(0, bottom.GetColumn(0));
+				bottom.SetColumn(0, back.GetColumn(2).Reverse().ToArray());
+				back.SetColumn(2, tempColumn.Reverse().ToArray());
+				left.RotateCCW();
+				raiseAfterLeftCCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// R
+		/// </summary>
+		public async Task RotateRightCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeRightCWRotation();
+				var tempColumn = top.GetColumn(2);
+				top.SetColumn(2, front.GetColumn(2));
+				front.SetColumn(2, bottom.GetColumn(2));
+				bottom.SetColumn(2, back.GetColumn(0).Reverse().ToArray());
+				back.SetColumn(0, tempColumn.Reverse().ToArray());
+				right.RotateCW();
+				raiseAfterRightCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// Ri
+		/// </summary>
+		public async Task RotateRightCCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeRightCCWRotation();
+				var tempColumn = top.GetColumn(2);
+				top.SetColumn(2, back.GetColumn(0).Reverse().ToArray());
+				back.SetColumn(0, bottom.GetColumn(2).Reverse().ToArray());
+				bottom.SetColumn(2, front.GetColumn(2));
+				front.SetColumn(2, tempColumn);
+				right.RotateCCW();
+				raiseAfterRightCCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// U
+		/// </summary>
+		public async Task RotateTopCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeTopCWRotation();
+				var tempRow = front.GetRow(0);
+				front.SetRow(0, right.GetRow(0));
+				right.SetRow(0, back.GetRow(0));
+				back.SetRow(0, left.GetRow(0));
+				left.SetRow(0, tempRow);
+				top.RotateCW();
+				raiseAfterTopCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// Ui
+		/// </summary>
+		public async Task RotateTopCCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeTopCCWRotation();
+				var tempRow = front.GetRow(0);
+				front.SetRow(0, left.GetRow(0));
+				left.SetRow(0, back.GetRow(0));
+				back.SetRow(0, right.GetRow(0));
+				right.SetRow(0, tempRow);
+				top.RotateCCW();
+				raiseAfterTopCCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// D
+		/// </summary>
+		public async Task RotateBottomCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeBottomCWRotation();
+				var tempRow = front.GetRow(2);
+				front.SetRow(2, left.GetRow(2));
+				left.SetRow(2, back.GetRow(2));
+				back.SetRow(2, right.GetRow(2));
+				right.SetRow(2, tempRow);
+				bottom.RotateCW();
+				raiseAfterBottomCWRotation();
+			});
+		}
+
+		/// <summary>
+		/// Di
+		/// </summary>
+		public async Task RotateBottomCCWAsync()
+		{
+			await Task.Run(() =>
+			{
+				raiseBeforeBottomCCWRotation();
+				var tempRow = front.GetRow(2);
+				front.SetRow(2, right.GetRow(2));
+				right.SetRow(2, back.GetRow(2));
+				back.SetRow(2, left.GetRow(2));
+				left.SetRow(2, tempRow);
+				bottom.RotateCCW();
+				raiseAfterBottomCCWRotation();
+			});
+		}
+
 		public void RotateSideCW(Sides side)
 		{
 			if (side == Sides.Back)

@@ -490,43 +490,43 @@ namespace RubiksCubeSolver
 			actionBi = new RelayCommand((param) =>
 			{
 				cube.RotateBackCCW();
-							});
+			});
 			actionF = new RelayCommand((param) =>
 			{
 				cube.RotateFrontCW();
-							});
+			});
 			actionFi = new RelayCommand((param) =>
 			{
 				cube.RotateFrontCCW();
-							});
+			});
 			actionL = new RelayCommand((param) =>
 			{
 				cube.RotateLeftCW();
-							});
+			});
 			actionLi = new RelayCommand((param) =>
 			{
 				cube.RotateLeftCCW();
-							});
+			});
 			actionR = new RelayCommand((param) =>
 			{
 				cube.RotateRightCW();
-							});
+			});
 			actionRi = new RelayCommand((param) =>
 			{
 				cube.RotateRightCCW();
-							});
+			});
 			actionU = new RelayCommand((param) =>
 			{
 				cube.RotateTopCW();
-							});
+			});
 			actionUi = new RelayCommand((param) =>
 			{
 				cube.RotateTopCCW();
-							});
+			});
 			actionD = new RelayCommand((param) =>
 			{
 				cube.RotateBottomCW();
-							});
+			});
 			actionDi = new RelayCommand((param) =>
 			{
 				cube.RotateBottomCCW();
