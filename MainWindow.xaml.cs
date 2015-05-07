@@ -44,54 +44,104 @@ namespace RubiksCubeSolver
 			this.DataContext = viewmodel;
 		}
 
-		private async void viewmodel_BeforeCubeTopCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeTopCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateTopCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeTopCCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeTopCCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateTopCCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeRightCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeRightCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateRightCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeRightCCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeRightCCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateRightCCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeLeftCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeLeftCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateLeftCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeLeftCCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeLeftCCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateLeftCCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeFrontCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeFrontCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateFrontCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeFrontCCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeFrontCCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateFrontCCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeBottomCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeBottomCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateBottomCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeBottomCCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeBottomCCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateBottomCCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
 		private void viewmodel_BeforeCubeBackCWRotation(object sender, EventArgs e)
@@ -104,9 +154,14 @@ namespace RubiksCubeSolver
 			}).Wait();
 		}
 
-		private async void viewmodel_BeforeCubeBackCCWRotation(object sender, EventArgs e)
+		private void viewmodel_BeforeCubeBackCCWRotation(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			this.Dispatcher.Invoke(async () =>
+			{
+				var animation = this.Resources["RotateBackCCW"] as Storyboard;
+				animation.Begin();
+				await waitUntilAnimationCompletion();
+			}).Wait();
 		}
 
 		private bool animationCompleted = false;
