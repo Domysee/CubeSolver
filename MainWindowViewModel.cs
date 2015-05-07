@@ -388,66 +388,65 @@ namespace RubiksCubeSolver
 		#endregion
 
 		#region Events
-		public event EventHandler BeforeCubeLeftCWRotation;
-		public event EventHandler BeforeCubeLeftCCWRotation;
-		public event EventHandler BeforeCubeRightCWRotation;
-		public event EventHandler BeforeCubeRightCCWRotation;
-		public event EventHandler BeforeCubeFrontCWRotation;
-		public event EventHandler BeforeCubeFrontCCWRotation;
-		public event EventHandler BeforeCubeBackCWRotation;
-		public event EventHandler BeforeCubeBackCCWRotation;
-		public event EventHandler BeforeCubeTopCWRotation;
-		public event EventHandler BeforeCubeTopCCWRotation;
-		public event EventHandler BeforeCubeBottomCWRotation;
-		public event EventHandler BeforeCubeBottomCCWRotation;
-
-		private void raiseBeforeCubeLeftCWRotation()
+		public event EventHandler BeforeCubeLeftCWRotation
 		{
-			if (BeforeCubeLeftCWRotation != null) BeforeCubeLeftCWRotation(this, new EventArgs());
+			add { cube.BeforeLeftCWRotation += value; }
+			remove { cube.BeforeLeftCWRotation -= value; }
 		}
-		private void raiseBeforeCubeLeftCCWRotation()
+		public event EventHandler BeforeCubeLeftCCWRotation
 		{
-			if (BeforeCubeLeftCCWRotation != null) BeforeCubeLeftCCWRotation(this, new EventArgs());
+			add { cube.BeforeLeftCCWRotation += value; }
+			remove { cube.BeforeLeftCCWRotation -= value; }
 		}
-		private void raiseBeforeCubeRightCWRotation()
+		public event EventHandler BeforeCubeRightCWRotation
 		{
-			if (BeforeCubeRightCWRotation != null) BeforeCubeRightCWRotation(this, new EventArgs());
+			add { cube.BeforeRightCWRotation += value; }
+			remove { cube.BeforeRightCWRotation -= value; }
 		}
-		private void raiseBeforeCubeRightCCWRotation()
+		public event EventHandler BeforeCubeRightCCWRotation
 		{
-			if (BeforeCubeRightCCWRotation != null) BeforeCubeRightCCWRotation(this, new EventArgs());
+			add { cube.BeforeRightCCWRotation += value; }
+			remove { cube.BeforeRightCCWRotation -= value; }
 		}
-		private void raiseBeforeCubeFrontCWRotation()
+		public event EventHandler BeforeCubeFrontCWRotation
 		{
-			if (BeforeCubeFrontCWRotation != null) BeforeCubeFrontCWRotation(this, new EventArgs());
+			add { cube.BeforeFrontCWRotation += value; }
+			remove { cube.BeforeFrontCWRotation -= value; }
 		}
-		private void raiseBeforeCubeFrontCCWRotation()
+		public event EventHandler BeforeCubeFrontCCWRotation
 		{
-			if (BeforeCubeFrontCCWRotation != null) BeforeCubeFrontCCWRotation(this, new EventArgs());
+			add { cube.BeforeFrontCCWRotation += value; }
+			remove { cube.BeforeFrontCCWRotation -= value; }
 		}
-		private void raiseBeforeCubeBackCWRotation()
+		public event EventHandler BeforeCubeBackCWRotation
 		{
-			if (BeforeCubeBackCWRotation != null) BeforeCubeBackCWRotation(this, new EventArgs());
+			add { cube.BeforeBackCWRotation += value; }
+			remove { cube.BeforeBackCWRotation -= value; }
 		}
-		private void raiseBeforeCubeBackCCWRotation()
+		public event EventHandler BeforeCubeBackCCWRotation
 		{
-			if (BeforeCubeBackCCWRotation != null) BeforeCubeBackCCWRotation(this, new EventArgs());
+			add { cube.BeforeBackCCWRotation += value; }
+			remove { cube.BeforeBackCCWRotation -= value; }
 		}
-		private void raiseBeforeCubeTopCWRotation()
+		public event EventHandler BeforeCubeTopCWRotation
 		{
-			if (BeforeCubeTopCWRotation != null) BeforeCubeTopCWRotation(this, new EventArgs());
+			add { cube.BeforeTopCWRotation += value; }
+			remove { cube.BeforeTopCWRotation -= value; }
 		}
-		private void raiseBeforeCubeTopCCWRotation()
+		public event EventHandler BeforeCubeTopCCWRotation
 		{
-			if (BeforeCubeTopCCWRotation != null) BeforeCubeTopCCWRotation(this, new EventArgs());
+			add { cube.BeforeTopCCWRotation += value; }
+			remove { cube.BeforeTopCCWRotation -= value; }
 		}
-		private void raiseBeforeCubeBottomCWRotation()
+		public event EventHandler BeforeCubeBottomCWRotation
 		{
-			if (BeforeCubeBottomCWRotation != null) BeforeCubeBottomCWRotation(this, new EventArgs());
+			add { cube.BeforeBottomCWRotation += value; }
+			remove { cube.BeforeBottomCWRotation -= value; }
 		}
-		private void raiseBeforeCubeBottomCCWRotation()
+		public event EventHandler BeforeCubeBottomCCWRotation
 		{
-			if (BeforeCubeBottomCCWRotation != null) BeforeCubeBottomCCWRotation(this, new EventArgs());
+			add { cube.BeforeBottomCCWRotation += value; }
+			remove{ cube.BeforeBottomCCWRotation -= value; }
 		}
 		#endregion
 
