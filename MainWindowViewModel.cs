@@ -485,7 +485,7 @@ namespace RubiksCubeSolver
 			});
 			actionB = new RelayCommand((param) =>
 			{
-				cube.RotateBackCWAsync();
+				cube.RotateBackCW();
 			});
 			actionBi = new RelayCommand((param) =>
 			{

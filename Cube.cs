@@ -259,6 +259,7 @@ namespace RubiksCubeSolver
 			bottom.SetRow(0, right.GetColumn(0).Reverse().ToArray());
 			right.SetColumn(0, tempRow);
 			front.RotateCW();
+			raiseAfterFrontCWRotation();
 		}
 
 		/// <summary>
@@ -273,12 +274,13 @@ namespace RubiksCubeSolver
 			bottom.SetRow(0, left.GetColumn(2));
 			left.SetColumn(2, tempRow.Reverse().ToArray());
 			front.RotateCCW();
+			raiseAfterFrontCCWRotation();
 		}
 
 		/// <summary>
 		/// B
 		/// </summary>
-		public void RotateBackCWAsync()
+		public void RotateBackCW()
 		{
 			Task.Run(() =>
 			{
@@ -305,6 +307,7 @@ namespace RubiksCubeSolver
 			bottom.SetRow(2, right.GetColumn(2).Reverse().ToArray());
 			right.SetColumn(2, tempRow);
 			back.RotateCCW();
+			raiseAfterBackCCWRotation();
 		}
 
 		/// <summary>
@@ -319,6 +322,7 @@ namespace RubiksCubeSolver
 			bottom.SetColumn(0, front.GetColumn(0));
 			front.SetColumn(0, tempColumn);
 			left.RotateCW();
+			raiseAfterLeftCWRotation();
 		}
 
 		/// <summary>
@@ -333,6 +337,7 @@ namespace RubiksCubeSolver
 			bottom.SetColumn(0, back.GetColumn(2).Reverse().ToArray());
 			back.SetColumn(2, tempColumn.Reverse().ToArray());
 			left.RotateCCW();
+			raiseAfterLeftCCWRotation();
 		}
 
 		/// <summary>
@@ -347,6 +352,7 @@ namespace RubiksCubeSolver
 			bottom.SetColumn(2, back.GetColumn(0).Reverse().ToArray());
 			back.SetColumn(0, tempColumn.Reverse().ToArray());
 			right.RotateCW();
+			raiseAfterRightCWRotation();
 		}
 
 		/// <summary>
@@ -361,6 +367,7 @@ namespace RubiksCubeSolver
 			bottom.SetColumn(2, front.GetColumn(2));
 			front.SetColumn(2, tempColumn);
 			right.RotateCCW();
+			raiseAfterRightCCWRotation();
 		}
 
 		/// <summary>
@@ -375,6 +382,7 @@ namespace RubiksCubeSolver
 			back.SetRow(0, left.GetRow(0));
 			left.SetRow(0, tempRow);
 			top.RotateCW();
+			raiseAfterTopCWRotation();
 		}
 
 		/// <summary>
@@ -389,6 +397,7 @@ namespace RubiksCubeSolver
 			back.SetRow(0, right.GetRow(0));
 			right.SetRow(0, tempRow);
 			top.RotateCCW();
+			raiseAfterTopCCWRotation();
 		}
 
 		/// <summary>
@@ -403,6 +412,7 @@ namespace RubiksCubeSolver
 			back.SetRow(2, right.GetRow(2));
 			right.SetRow(2, tempRow);
 			bottom.RotateCW();
+			raiseAfterBottomCWRotation();
 		}
 
 		/// <summary>
@@ -417,12 +427,13 @@ namespace RubiksCubeSolver
 			back.SetRow(2, left.GetRow(2));
 			left.SetRow(2, tempRow);
 			bottom.RotateCCW();
+			raiseAfterBottomCCWRotation();
 		}
 
 		public void RotateSideCW(Sides side)
 		{
 			if (side == Sides.Back)
-				RotateBackCWAsync();
+				RotateBackCW();
 			if (side == Sides.Front)
 				RotateFrontCW();
 			if (side == Sides.Left)
