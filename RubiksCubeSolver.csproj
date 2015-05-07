@@ -58,6 +58,7 @@
     <Compile Include="HumanCubeSolver3x3.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Matrix.cs" />
+    <Compile Include="RelativeCornerPosition.cs" />
     <Compile Include="RelativeEdgePosition.cs" />
     <Compile Include="RelativeSidePosition.cs" />
     <Compile Include="RelayCommand.cs" />
