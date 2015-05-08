@@ -479,7 +479,7 @@ namespace RubiksCubeSolver
 			{
 				Task.Run(() =>
 				{
-					new HumanCubeSolver3x3().SolveTopCross(cube);
+					new AiCubeSolver().SolveTopCross(cube);
 				});
 			});
 			randomize = new RelayCommand((param) =>
