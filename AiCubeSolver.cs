@@ -9,6 +9,10 @@ namespace RubiksCubeSolver
 {
 	public class AiCubeSolver
 	{
+		/// <summary>
+		/// solves the top cross using depth first search
+		/// </summary>
+		/// <param name="cube"></param>
 		public void SolveTopCross(Cube cube)
 		{
 			const int maxDepth = 10;
