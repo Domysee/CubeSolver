@@ -12,50 +12,83 @@ namespace RubiksCubeSolver
 		public void SolveTopCross(Cube cube)
 		{
 			var actionStack = new Stack<int>();
+			while (!cube.IsTopCrossSolved())
+			{
+				if (actionStack.Count < 9)
+				{
+					actionStack.Push(0);
+					applyAction(cube, 0);
+				}
+				else if (actionStack.Count == 9)
+				{
+					//reverse the action done previously
+					int previousAction = actionStack.Pop();
+					applyOppositeAction(cube, previousAction);
 
+					//pop all last actions from the stack
+					while (previousAction == 11)
+					{
+						previousAction = actionStack.Pop();
+						applyOppositeAction(cube, previousAction);
+					}
+
+					//apply next action
+					int action = previousAction + 1;
+					applyAction(cube, previousAction);
+				}
+			}
+
+			int[] actions = actionStack.ToArray();
+			//reset the cube so that it is in original state
+			while (actionStack.Count > 0) applyOppositeAction(cube, actionStack.Pop());
+
+			foreach (var action in actions)
+			{
+				applyAction(cube, action, true);
+			}
 		}
 
-		private void applyAction(Cube cube, int turnId)
+		private void applyAction(Cube cube, int turnId, bool fireEvents = false)
 		{
 			Debug.Assert(turnId < 12 && turnId >= 0);
 
 			switch (turnId)
 			{
 				case 0:
-					cube.RotateBackCCWAsync().Wait();
+					cube.RotateBackCCWAsync(fireEvents).Wait();
 					break;
 				case 1:
-					cube.RotateBackCWAsync().Wait();
+					cube.RotateBackCWAsync(fireEvents).Wait();
 					break;
 				case 2:
-					cube.RotateBottomCCWAsync().Wait();
+					cube.RotateBottomCCWAsync(fireEvents).Wait();
 					break;
 				case 3:
-					cube.RotateBottomCWAsync().Wait();
+					cube.RotateBottomCWAsync(fireEvents).Wait();
 					break;
 				case 4:
-					cube.RotateFrontCCWAsync().Wait();
+					cube.RotateFrontCCWAsync(fireEvents).Wait();
 					break;
 				case 5:
-					cube.RotateFrontCWAsync().Wait();
+					cube.RotateFrontCWAsync(fireEvents).Wait();
 					break;
 				case 6:
-					cube.RotateLeftCCWAsync().Wait();
+					cube.RotateLeftCCWAsync(fireEvents).Wait();
 					break;
 				case 7:
-					cube.RotateLeftCWAsync().Wait();
+					cube.RotateLeftCWAsync(fireEvents).Wait();
 					break;
 				case 8:
-					cube.RotateRightCCWAsync().Wait();
+					cube.RotateRightCCWAsync(fireEvents).Wait();
 					break;
 				case 9:
-					cube.RotateRightCWAsync().Wait();
+					cube.RotateRightCWAsync(fireEvents).Wait();
 					break;
 				case 10:
-					cube.RotateTopCCWAsync().Wait();
+					cube.RotateTopCCWAsync(fireEvents).Wait();
 					break;
 				case 11:
-					cube.RotateTopCWAsync().Wait();
+					cube.RotateTopCWAsync(fireEvents).Wait();
 					break;
 			}
 		}
