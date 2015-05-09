@@ -1,4 +1,5 @@
 ﻿using RubiksCubeSolver.StartCrossMoves;
+using RubiksCubeSolver.StartEdgeMove;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -477,9 +478,20 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
+				//Task.Run(() =>
+				//{
+				//	new HumanCubeSolver3x3().SolveTopCross(cube);
+				//});
 				Task.Run(() =>
 				{
-					new HumanCubeSolver3x3().SolveTopCross(cube);
+					IStartEdgeMove move = new StartEdgeMove1();
+					foreach (RelativeCornerPosition corner in Enum.GetValues(typeof(RelativeCornerPosition)))
+					{
+						if (move.Applicable(cube, corner) == 1)
+						{
+							move.Apply(cube, corner);
+						}
+					}
 				});
 			});
 			randomize = new RelayCommand((param) =>
