@@ -271,5 +271,15 @@ namespace RubiksCubeSolver
 
 			return null;	//default case to satisfy the compiler, should never occur;
 		}
+
+		public Brush GetCornerField(RelativeCornerPosition corner)
+		{
+			if (corner == RelativeCornerPosition.BottomLeft) return fields[2, 0];
+			if (corner == RelativeCornerPosition.BottomRight) return fields[2, 2];
+			if (corner == RelativeCornerPosition.TopLeft) return fields[0, 0];
+			if (corner == RelativeCornerPosition.TopRight) return fields[0, 2];
+
+			return Brushes.Transparent;	//default to satisfy compiler
+		}
 	}
 }
