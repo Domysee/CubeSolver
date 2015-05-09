@@ -9,6 +9,9 @@ namespace RubiksCubeSolver
 	/// <summary>
 	/// represents a set of moves to solve the first cross
 	/// Top is takes as start side
+	/// 
+	/// The neutral corner position is bottom left
+	/// Every corner is treated as if the cube was rotated so that it is the bottom left corner
 	/// </summary>
 	public interface IStartEdgeMove
 	{

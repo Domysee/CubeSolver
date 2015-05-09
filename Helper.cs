@@ -425,5 +425,40 @@ namespace RubiksCubeSolver
 
 			return startPosition;
 		}
+
+		/// <summary>
+		/// returns the sides that would be front and left
+		/// if the cube was rotated so that the corner is the left bottom corner
+		/// </summary>
+		/// <param name="corner"></param>
+		/// <param name="front"></param>
+		/// <param name="left"></param>
+		public static void GetFrontLeftFromCorner(RelativeCornerPosition corner, out Sides front, out Sides left)
+		{
+			//default
+			front = Sides.Front;
+			left = Sides.Left;
+
+			if (corner == RelativeCornerPosition.BottomLeft)
+			{
+				front = Sides.Front;
+				left = Sides.Left;
+			}
+			if (corner == RelativeCornerPosition.BottomRight)
+			{
+				front = Sides.Right;
+				left = Sides.Front;
+			}
+			if (corner == RelativeCornerPosition.TopRight)
+			{
+				front = Sides.Back;
+				left = Sides.Right;
+			}
+			if (corner == RelativeCornerPosition.TopLeft)
+			{
+				front = Sides.Left;
+				left = Sides.Back;
+			}
+		}
 	}
 }
