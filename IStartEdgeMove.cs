@@ -10,7 +10,7 @@ namespace RubiksCubeSolver
 	/// represents a set of moves to solve the first cross
 	/// Top is takes as start side
 	/// </summary>
-	public interface IStartSideEdgeMove
+	public interface IStartEdgeMove
 	{
 		/// <summary>
 		/// applies the move onto the given cube

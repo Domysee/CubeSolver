@@ -57,7 +57,7 @@
     <Compile Include="CubeRandomizer.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HumanCubeSolver3x3.cs" />
-    <Compile Include="IStartSideEdgeMove.cs" />
+    <Compile Include="IStartEdgeMove.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Matrix.cs" />
     <Compile Include="RelativeCornerPosition.cs" />
@@ -132,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="StartEdgeMove\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
