@@ -414,6 +414,21 @@ namespace RubiksCubeSolver
 		}
 
 		/// <summary>
+		/// swaps top and bottom, leaves the other options as they are
+		/// </summary>
+		/// <param name="?"></param>
+		/// <returns></returns>
+		public static RelativeCornerPosition SwapTopBottom(RelativeCornerPosition startPosition)
+		{
+			if (startPosition == RelativeCornerPosition.TopLeft) return RelativeCornerPosition.BottomLeft;
+			if (startPosition == RelativeCornerPosition.TopRight) return RelativeCornerPosition.BottomRight;
+			if (startPosition == RelativeCornerPosition.BottomLeft) return RelativeCornerPosition.TopLeft;
+			if (startPosition == RelativeCornerPosition.BottomRight) return RelativeCornerPosition.TopRight;
+
+			return startPosition;
+		}
+
+		/// <summary>
 		/// swaps left and right, leaves the other options as they are
 		/// </summary>
 		/// <param name="?"></param>
