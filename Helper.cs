@@ -9,6 +9,11 @@ namespace RubiksCubeSolver
 {
 	public static class Helper
 	{
+		/// <summary>
+		/// returns the opposite side
+		/// </summary>
+		/// <param name="relativeSide"></param>
+		/// <returns></returns>
 		public static RelativeSidePosition GetOppositeRelativeSide(RelativeSidePosition relativeSide)
 		{
 			switch (relativeSide)
@@ -23,6 +28,11 @@ namespace RubiksCubeSolver
 			}
 		}
 
+		/// <summary>
+		/// returns the opposite edge
+		/// </summary>
+		/// <param name="relativeEdge"></param>
+		/// <returns></returns>
 		public static RelativeEdgePosition GetOppositeRelativeEdge(RelativeEdgePosition relativeEdge)
 		{
 			switch (relativeEdge)
@@ -34,6 +44,12 @@ namespace RubiksCubeSolver
 				default: return RelativeEdgePosition.NotExisting;
 			}
 		}
+
+		/// <summary>
+		/// converts the relative side to the according relative edge
+		/// </summary>
+		/// <param name="relativeSide"></param>
+		/// <returns></returns>
 		public static RelativeEdgePosition ConvertRelativeSidePositionToRelativeEdgePosition(RelativeSidePosition relativeSide)
 		{
 			switch (relativeSide)
@@ -103,6 +119,12 @@ namespace RubiksCubeSolver
 			return GetSideRelation(startSide.CubeSide, GetRotationNeutralRelativeSide(startSide, relativeSidePosition, relativeEdgePosition).CubeSide);
 		}
 
+		/// <summary>
+		/// gets the relation of the two given Sides
+		/// </summary>
+		/// <param name="startSide"></param>
+		/// <param name="relationSide"></param>
+		/// <returns></returns>
 		public static RelativeSidePosition GetSideRelation(Sides startSide, Sides relationSide)
 		{
 			if (startSide == Sides.Front)
@@ -276,6 +298,12 @@ namespace RubiksCubeSolver
 			return RelativeSidePosition.NotExisting;	//default to satisfy the compiler, should never occur
 		}
 
+		/// <summary>
+		/// gets the side relative to startSide according to relativeSide
+		/// </summary>
+		/// <param name="startSide"></param>
+		/// <param name="relativeSide"></param>
+		/// <returns></returns>
 		public static Sides GetRelativeSide(Sides startSide, RelativeSidePosition relativeSide)
 		{
 			Debug.Assert(relativeSide != RelativeSidePosition.NotExisting);
@@ -337,6 +365,13 @@ namespace RubiksCubeSolver
 			return startSide;	//default value to satisfy the compiler, should never be used
 		}
 
+		/// <summary>
+		/// gets the edge relative to startEdge according to relativeEdge
+		/// e.g. startEdge = Left and relativeEdge = Top, result = Right
+		/// </summary>
+		/// <param name="startEdge"></param>
+		/// <param name="relativeEdge"></param>
+		/// <returns></returns>
 		public static RelativeEdgePosition GetRelativeEdge(RelativeEdgePosition startEdge, RelativeEdgePosition relativeEdge)
 		{
 			if (relativeEdge == RelativeEdgePosition.Bottom) return startEdge;

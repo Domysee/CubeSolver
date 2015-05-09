@@ -90,6 +90,7 @@
     <Compile Include="StartCrossMoves\StartCrossMove1.cs" />
     <Compile Include="Sides.cs" />
     <Compile Include="Moves.cs" />
+    <Compile Include="StartEdgeMove\StartEdgeMove1.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -133,9 +134,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StartEdgeMove\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
