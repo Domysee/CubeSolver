@@ -484,7 +484,7 @@ namespace RubiksCubeSolver
 				//});
 				Task.Run(() =>
 				{
-					IStartEdgeMove move = new StartEdgeMove3();
+					IStartEdgeMove move = new StartEdgeMove4();
 					foreach (RelativeCornerPosition corner in Enum.GetValues(typeof(RelativeCornerPosition)))
 					{
 						if (move.Applicable(cube, corner) == 1)

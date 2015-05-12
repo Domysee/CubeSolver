@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace RubiksCubeSolver
 {
@@ -474,6 +475,11 @@ namespace RubiksCubeSolver
 				front = Sides.Left;
 				left = Sides.Back;
 			}
+		}
+
+		public static bool IsOfColor(Brush testcolor, params Brush[] colors)
+		{
+			return colors.Contains(testcolor);
 		}
 	}
 }
