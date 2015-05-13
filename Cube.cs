@@ -743,6 +743,25 @@ namespace RubiksCubeSolver
 
 			return true;
 		}
+
+		public bool IsTopEdgesSolved()
+		{
+			return
+				//check top corners
+				top.GetCornerField(RelativeCornerPosition.BottomLeft) == top.Color &&
+				top.GetCornerField(RelativeCornerPosition.BottomRight) == top.Color &&
+				top.GetCornerField(RelativeCornerPosition.TopLeft) == top.Color &&
+				top.GetCornerField(RelativeCornerPosition.TopRight) == top.Color &&
+				//check side corners
+				left.GetCornerField(RelativeCornerPosition.TopLeft) == left.Color &&
+				left.GetCornerField(RelativeCornerPosition.TopRight) == left.Color &&
+				back.GetCornerField(RelativeCornerPosition.TopLeft) == back.Color &&
+				back.GetCornerField(RelativeCornerPosition.TopRight) == back.Color &&
+				right.GetCornerField(RelativeCornerPosition.TopLeft) == right.Color &&
+				right.GetCornerField(RelativeCornerPosition.TopRight) == right.Color &&
+				front.GetCornerField(RelativeCornerPosition.TopLeft) == front.Color &&
+				front.GetCornerField(RelativeCornerPosition.TopRight) == front.Color;
+		}
 		#endregion
 	}
 }
