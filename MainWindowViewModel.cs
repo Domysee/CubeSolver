@@ -386,6 +386,13 @@ namespace RubiksCubeSolver
 			get { return actionBi; }
 			set { actionBi = value; }
 		}
+		private RelayCommand solve;
+
+		public RelayCommand Solve
+		{
+			get { return solve; }
+			set { solve = value; }
+		}
 		#endregion
 
 		#region Events
@@ -478,10 +485,6 @@ namespace RubiksCubeSolver
 		{
 			test = new RelayCommand((param) =>
 			{
-				//Task.Run(() =>
-				//{
-				//	new HumanCubeSolver3x3().SolveTopCross(cube);
-				//});
 				Task.Run(() =>
 				{
 					IStartEdgeMove move = new StartEdgeMove4();
@@ -499,6 +502,15 @@ namespace RubiksCubeSolver
 				Task.Run(() =>
 				{
 					new CubeRandomizer().DoRandomTurns(cube);
+				});
+			});
+			solve = new RelayCommand((param) =>
+			{
+				Task.Run(() =>
+				{
+					var solver = new HumanCubeSolver3x3();
+					solver.SolveTopCross(cube);
+					solver.SolveTopEdges(cube);
 				});
 			});
 			actionB = new RelayCommand((param) =>

@@ -805,9 +805,10 @@
 			<Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionU}">U</Button>
 			<Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionUi}">Ui</Button>
 			<Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionD}">D</Button>
-			<Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionDi}">Di</Button>
-			<Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=Randomize}">Random</Button>
-		</StackPanel>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=ActionDi}">Di</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=Randomize}">Random</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding Path=Solve}">Solve</Button>
+        </StackPanel>
 		<Viewport3D>
 			<Viewport3D.Camera>
 				<OrthographicCamera Position="-5 5 5" LookDirection="5 -5 -5" Width="10" />
