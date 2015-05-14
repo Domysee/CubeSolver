@@ -27,10 +27,13 @@ namespace RubiksCubeSolver.StartCornerMoves
 			Side front = cube.GetSideFromEnum(frontSide);
 			Side left = cube.GetSideFromEnum(leftSide);
 
-			//if the front bottom left field is of the top color
-			//and the other fields are either the left color or the front color
-			if (Helper.IsOfColor(front.GetCornerField(RelativeCornerPosition.TopLeft), cube.Top.Color) ||
-				Helper.IsOfColor(left.GetCornerField(RelativeCornerPosition.TopRight), cube.Top.Color))
+			//check if the corner piece is incorrectly positioned, but one of the 3 colors is the top color
+			//moving it down if it is not a top piece is useless
+			if ((front.GetCornerField(RelativeCornerPosition.TopLeft) != front.Color ||
+				left.GetCornerField(RelativeCornerPosition.TopRight) != left.Color) &&
+				(front.GetCornerField(RelativeCornerPosition.TopLeft) == cube.Top.Color ||
+				left.GetCornerField(RelativeCornerPosition.TopRight) == cube.Top.Color ||
+				cube.Top.GetCornerField(corner) == cube.Top.Color))
 			{
 				return 1;
 			}
