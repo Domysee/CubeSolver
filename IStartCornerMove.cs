@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace RubiksCubeSolver
 {
 	/// <summary>
-	/// represents a set of moves to solve the first cross
-	/// Top is takes as start side
+	/// represents a set of moves to solve the corners of the top layer
 	/// 
 	/// The neutral corner position is bottom left
 	/// Every corner is treated as if the cube was rotated so that it is the bottom left corner
