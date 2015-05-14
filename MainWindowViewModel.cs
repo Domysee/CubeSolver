@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using RubiksCubeSolver.SecondLayerEdgeMoves;
 
 namespace RubiksCubeSolver
 {
@@ -487,12 +488,12 @@ namespace RubiksCubeSolver
 			{
 				Task.Run(() =>
 				{
-					IStartCornerMove move = new StartCornerMove4();
-					foreach (RelativeCornerPosition corner in Enum.GetValues(typeof(RelativeCornerPosition)))
+					ISecondLayerEdgeMove move = new SecondLayerEdgeMove1();
+					foreach (Sides side in new Sides[] { Sides.Front, Sides.Left, Sides.Back, Sides.Right })
 					{
-						if (move.Applicable(cube, corner) == 1)
+						if (move.Applicable(cube, side) == 1)
 						{
-							move.Apply(cube, corner);
+							move.Apply(cube, side);
 						}
 					}
 				});
