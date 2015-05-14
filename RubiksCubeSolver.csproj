@@ -57,7 +57,8 @@
     <Compile Include="CubeRandomizer.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HumanCubeSolver3x3.cs" />
-    <Compile Include="IStartEdgeMove.cs" />
+    <Compile Include="IStartSecondLayerEdgeMove.cs" />
+    <Compile Include="IStartCornerMove.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Matrix.cs" />
     <Compile Include="RelativeCornerPosition.cs" />
