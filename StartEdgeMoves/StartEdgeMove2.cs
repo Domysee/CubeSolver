@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RubiksCubeSolver.StartEdgeMove
+namespace RubiksCubeSolver.StartEdgeMoves
 {
 	/// <summary>
 	/// corner piece is at the bottom, white side left

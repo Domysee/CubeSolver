@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RubiksCubeSolver.StartEdgeMove
+namespace RubiksCubeSolver.StartEdgeMoves
 {
 	/// <summary>
-	/// corner piece is at the top, is moved down
+	/// corner piece is at the bottom, white side front
 	/// </summary>
-	public class StartEdgeMove4 : IStartEdgeMove
+	public class StartEdgeMove1 : IStartEdgeMove
 	{
 		public void Apply(Cube cube, RelativeCornerPosition corner)
 		{
 			Sides frontSide, leftSide;
 			Helper.GetFrontLeftFromCorner(corner, out frontSide, out leftSide);
-			cube.RotateSideCCW(frontSide);
+			cube.RotateBottomCW();
+			cube.RotateSideCW(leftSide);
 			cube.RotateBottomCCW();
-			cube.RotateSideCW(frontSide);
+			cube.RotateSideCCW(leftSide);
 		}
 
 		public double Applicable(Cube cube, RelativeCornerPosition corner)
@@ -29,8 +30,9 @@ namespace RubiksCubeSolver.StartEdgeMove
 
 			//if the front bottom left field is of the top color
 			//and the other fields are either the left color or the front color
-			if (Helper.IsOfColor(front.GetCornerField(RelativeCornerPosition.TopLeft), cube.Top.Color) ||
-				Helper.IsOfColor(left.GetCornerField(RelativeCornerPosition.TopRight), cube.Top.Color))
+			if (front.GetCornerField(RelativeCornerPosition.BottomLeft) == cube.Top.Color &&
+				(left.GetCornerField(RelativeCornerPosition.BottomRight) == left.Color || left.GetCornerField(RelativeCornerPosition.BottomRight) == front.Color) &&
+				(cube.Bottom.GetCornerField(Helper.SwapTopBottom(corner)) == left.Color || cube.Bottom.GetCornerField(Helper.SwapTopBottom(corner)) == front.Color))
 			{
 				return 1;
 			}

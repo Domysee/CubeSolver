@@ -1,5 +1,5 @@
 ﻿using RubiksCubeSolver.StartCrossMoves;
-using RubiksCubeSolver.StartEdgeMove;
+using RubiksCubeSolver.StartEdgeMoves;
 using System;
 using System.Collections.Generic;
 using System.Linq;
