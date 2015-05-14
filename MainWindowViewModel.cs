@@ -1,5 +1,5 @@
 ﻿using RubiksCubeSolver.StartCrossMoves;
-using RubiksCubeSolver.StartEdgeMoves;
+using RubiksCubeSolver.StartCornerMoves;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -487,7 +487,7 @@ namespace RubiksCubeSolver
 			{
 				Task.Run(() =>
 				{
-					IStartEdgeMove move = new StartEdgeMove4();
+					IStartCornerMove move = new StartCornerMove4();
 					foreach (RelativeCornerPosition corner in Enum.GetValues(typeof(RelativeCornerPosition)))
 					{
 						if (move.Applicable(cube, corner) == 1)

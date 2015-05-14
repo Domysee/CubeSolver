@@ -13,7 +13,7 @@ namespace RubiksCubeSolver
 	/// The neutral corner position is bottom left
 	/// Every corner is treated as if the cube was rotated so that it is the bottom left corner
 	/// </summary>
-	public interface IStartEdgeMove
+	public interface IStartCornerMove
 	{
 		/// <summary>
 		/// applies the move onto the given cube

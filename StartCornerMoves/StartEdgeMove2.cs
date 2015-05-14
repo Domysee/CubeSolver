@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RubiksCubeSolver.StartEdgeMoves
+namespace RubiksCubeSolver.StartCornerMoves
 {
 	/// <summary>
 	/// corner piece is at the bottom, white side left
 	/// </summary>
-	public class StartEdgeMove2 : IStartEdgeMove
+	public class StartCornerMove2 : IStartCornerMove
 	{
 		public void Apply(Cube cube, RelativeCornerPosition corner)
 		{
