@@ -114,6 +114,14 @@ namespace RubiksCubeSolver
 			return null;
 		}
 
+		/// <summary>
+		/// treats the cube as if it were rotated so that the relativeEdgePosition is bottom
+		/// and then returns the side relation of the start side and the relative side
+		/// </summary>
+		/// <param name="startSide"></param>
+		/// <param name="relativeSidePosition"></param>
+		/// <param name="relativeEdgePosition"></param>
+		/// <returns></returns>
 		public static RelativeSidePosition GetRotationNeutralRelativeSidePosition(Side startSide,
 			RelativeSidePosition relativeSidePosition, RelativeEdgePosition relativeEdgePosition)
 		{
