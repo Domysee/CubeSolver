@@ -770,6 +770,17 @@ namespace RubiksCubeSolver
 				front.GetCornerField(RelativeCornerPosition.TopLeft) == front.Color &&
 				front.GetCornerField(RelativeCornerPosition.TopRight) == front.Color;
 		}
+
+		public bool IsSecondLayerSolved()
+		{
+			//check if each side of the second layer has the second layer solved (middle row)
+			foreach (Side side in new Side[] { front, left, back, right })
+			{
+				if (side.Fields[1, 0] != side.Color || side.Fields[1, 1] != side.Color || side.Fields[1, 2] != side.Color)
+					return false;
+			}
+			return true;
+		}
 		#endregion
 	}
 }
