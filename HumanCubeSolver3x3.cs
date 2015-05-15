@@ -9,6 +9,7 @@ namespace RubiksCubeSolver
 	public class HumanCubeSolver3x3
 	{
 		private RelativeSidePosition[] relativeSidePositions = { RelativeSidePosition.Left, RelativeSidePosition.Top, RelativeSidePosition.Right, RelativeSidePosition.Bottom };
+		private RelativeCornerPosition[] relativeCornerPositions = { RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight, RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight };
 		public void SolveTopCross(Cube cube)
 		{
 			while (!cube.IsTopCrossSolved())
@@ -32,7 +33,7 @@ namespace RubiksCubeSolver
 				{
 					//first, move any edges that are in the correct bottom position on the correct top position
 					//go through every edge
-					foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight, RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight })
+					foreach (var corner in relativeCornerPositions)
 					{
 						//go through every possible move
 						foreach (var move in Moves.StartEdgeMoves)
@@ -57,7 +58,7 @@ namespace RubiksCubeSolver
 
 				//move corner pieces that are in the correct position but wrongly rotated to the bottom
 				//if there are no such pieces then the moves are not applied, therefore no check for the solved state is needed
-				foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight, RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight })
+				foreach (var corner in relativeCornerPositions)
 				{
 					if (Moves.StartEdgeMoveDownMove.Applicable(cube, corner) == 1)
 					{
