@@ -488,7 +488,7 @@ namespace RubiksCubeSolver
 			{
 				Task.Run(() =>
 				{
-					ISecondLayerEdgeMove move = new SecondLayerEdgeMove1();
+					ISecondLayerEdgeMove move = new SecondLayerEdgeMove2();
 					foreach (Sides side in new Sides[] { Sides.Front, Sides.Left, Sides.Back, Sides.Right })
 					{
 						if (move.Applicable(cube, side) == 1)
@@ -512,6 +512,7 @@ namespace RubiksCubeSolver
 					var solver = new HumanCubeSolver3x3();
 					solver.SolveTopCross(cube);
 					solver.SolveTopEdges(cube);
+					solver.SolveSecondLayer(cube);
 				});
 			});
 			actionB = new RelayCommand((param) =>
