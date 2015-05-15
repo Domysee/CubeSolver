@@ -65,6 +65,7 @@
     <Compile Include="RelativeEdgePosition.cs" />
     <Compile Include="RelativeSidePosition.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="SecondLayerEdgeMoves\SecondLayerEdgeMove3.cs" />
     <Compile Include="SecondLayerEdgeMoves\SecondLayerEdgeMove2.cs" />
     <Compile Include="SecondLayerEdgeMoves\SecondLayerEdgeMove1.cs" />
     <Compile Include="Side.cs" />
