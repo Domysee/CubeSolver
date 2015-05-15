@@ -189,6 +189,14 @@ namespace RubiksCubeSolver
 			top = new Side(Brushes.White, Sides.Top);
 			bottom = new Side(Brushes.Yellow, Sides.Bottom);
 
+			SetRelativeSides();
+		}
+
+		/// <summary>
+		/// sets the relative sides (left, right, top, bottom, opposite) of each side 
+		/// </summary>
+		private void SetRelativeSides()
+		{
 			front.Left = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Left));
 			front.Right = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Right));
 			front.Top = GetSideFromEnum(Helper.GetRelativeSide(Sides.Front, RelativeSidePosition.Top));
