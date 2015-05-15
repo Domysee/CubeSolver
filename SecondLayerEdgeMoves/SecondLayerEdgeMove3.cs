@@ -30,10 +30,14 @@ namespace RubiksCubeSolver.SecondLayerEdgeMoves
 		public double Applicable(Cube cube, Sides side)
 		{
 			Side solveSide = cube.GetSideFromEnum(side);
-			if (Helper.IsOfColor(solveSide.Fields[1, 2], solveSide.Left.Color, solveSide.Right.Color, solveSide.Opposite.Color) &&
-				Helper.IsOfColor(solveSide.Right.Fields[1, 0], solveSide.Right.Left.Color, solveSide.Right.Right.Color, solveSide.Right.Opposite.Color))
+			if (Helper.IsOfColor(solveSide.Fields[1, 2], cube.Left.Color, cube.Back.Color, cube.Right.Color, cube.Front.Color) &&
+				Helper.IsOfColor(solveSide.Right.Fields[1, 0], cube.Left.Color, cube.Back.Color, cube.Right.Color, cube.Front.Color))
 			{
-				return 1;
+				//exclude the case where the piece is correctly positioned
+				if (solveSide.Fields[1, 2] == solveSide.Color && solveSide.Right.Fields[1, 0] == solveSide.Right.Color)
+					return 0;
+				else
+					return 1;
 			}
 			return 0;
 		}
