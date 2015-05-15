@@ -9,6 +9,9 @@ namespace RubiksCubeSolver.SecondLayerEdgeMoves
 	/// <summary>
 	/// moves out the right edge piece 
 	/// if it is not an edge piece of the top side
+	/// 
+	/// a similar move for the left side is not needed
+	/// because the algorithm will move through each side (front, left, back, right), which covers all edges of the second layer
 	/// </summary>
 	public class SecondLayerEdgeMove3 : ISecondLayerEdgeMove
 	{
