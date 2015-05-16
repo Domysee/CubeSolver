@@ -781,6 +781,18 @@ namespace RubiksCubeSolver
 			}
 			return true;
 		}
+
+		public bool IsOLLSolved()
+		{
+			for (int i = 0; i < bottom.Fields.GetLength(0); i++)
+			{
+				for (int j = 0; j < bottom.Fields.GetLength(1); j++)
+				{
+					if (bottom.Fields[i, j] != bottom.Color) return false;
+				}
+			}
+			return true;
+		}
 		#endregion
 	}
 }
