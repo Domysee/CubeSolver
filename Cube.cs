@@ -782,6 +782,12 @@ namespace RubiksCubeSolver
 			return true;
 		}
 
+		public bool IsBottomCrossSolved()
+		{
+			return bottom.Fields[0, 1] == bottom.Color && bottom.Fields[1, 0] == bottom.Color &&
+				   bottom.Fields[1, 2] == bottom.Color && bottom.Fields[2, 1] == bottom.Color;
+		}
+
 		public bool IsOLLSolved()
 		{
 			for (int i = 0; i < bottom.Fields.GetLength(0); i++)
