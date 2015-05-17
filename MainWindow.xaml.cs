@@ -15,6 +15,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//TODO: unify the names of layers: instead of Start... name it FirstLayer, also rename Cube.SolveStates methods
 namespace RubiksCubeSolver
 {
 	/// <summary>
