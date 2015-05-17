@@ -128,7 +128,7 @@ namespace RubiksCubeSolver
 						}
 					}
 
-					if (cube.IsSecondLayerSolved())
+					if (cube.IsBottomCrossSolved())
 					{
 						break;
 					}

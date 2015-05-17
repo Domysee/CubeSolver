@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using RubiksCubeSolver.SecondLayerEdgeMoves;
+using RubiksCubeSolver.ThirdLayerCrossMoves;
 
 namespace RubiksCubeSolver
 {
@@ -488,14 +489,8 @@ namespace RubiksCubeSolver
 			{
 				Task.Run(() =>
 				{
-					ISecondLayerEdgeMove move = new SecondLayerEdgeMove2();
-					foreach (Sides side in new Sides[] { Sides.Front, Sides.Left, Sides.Back, Sides.Right })
-					{
-						if (move.Applicable(cube, side) == 1)
-						{
-							move.Apply(cube, side);
-						}
-					}
+					IThirdLayerCrossMove move = new ThirdLayerCrossMove1();
+					move.Apply(cube);
 				});
 			});
 			randomize = new RelayCommand((param) =>

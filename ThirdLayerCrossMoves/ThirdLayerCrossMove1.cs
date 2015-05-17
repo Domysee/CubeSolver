@@ -14,12 +14,12 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 		/// <param name="cube"></param>
 		public void Apply(Cube cube)
 		{
-			cube.RotateFrontCW();
+			cube.RotateBackCW();
 			cube.RotateBottomCW();
-			cube.RotateLeftCW();
+			cube.RotateRightCW();
 			cube.RotateBottomCCW();
-			cube.RotateLeftCCW();
-			cube.RotateFrontCCW();
+			cube.RotateRightCCW();
+			cube.RotateBackCCW();
 		}
 
 		public double Applicable(Cube cube)
