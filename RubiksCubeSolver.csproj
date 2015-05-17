@@ -99,6 +99,7 @@
     <Compile Include="StartCornerMoves\StartEdgeMove3.cs" />
     <Compile Include="StartCornerMoves\StartEdgeMove2.cs" />
     <Compile Include="StartCornerMoves\StartEdgeMove1.cs" />
+    <Compile Include="ThirdLayerCrossMoves\ThirdLayerCrossMove2.cs" />
     <Compile Include="ThirdLayerCrossMoves\ThirdLayerCrossMove1.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
