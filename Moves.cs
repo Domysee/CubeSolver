@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RubiksCubeSolver.SecondLayerEdgeMoves;
+using RubiksCubeSolver.ThirdLayerCrossMoves;
 
 namespace RubiksCubeSolver
 {
@@ -17,5 +18,6 @@ namespace RubiksCubeSolver
 		public static readonly IStartCornerMove StartEdgeMoveDownMove = new StartCornerMove4();
 		public static readonly ISecondLayerEdgeMove[] SecondLayerEdgeMoves = new ISecondLayerEdgeMove[] { new SecondLayerEdgeMove1(), new SecondLayerEdgeMove2() };
 		public static readonly ISecondLayerEdgeMove SecondLayerOutMove = new SecondLayerEdgeMove3();
+		public static readonly IThirdLayerCrossMove[] ThirdLayerCrossMoves = new IThirdLayerCrossMove[] { new ThirdLayerCrossMove1(), new ThirdLayerCrossMove2() };
 	}
 }
