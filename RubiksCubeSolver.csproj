@@ -57,6 +57,7 @@
     <Compile Include="CubeRandomizer.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HumanCubeSolver3x3.cs" />
+    <Compile Include="IThirdLayerCrossMove.cs" />
     <Compile Include="ISecondLayerEdgeMove.cs" />
     <Compile Include="IStartCornerMove.cs" />
     <Compile Include="MainWindowViewModel.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="StartCornerMoves\StartEdgeMove3.cs" />
     <Compile Include="StartCornerMoves\StartEdgeMove2.cs" />
     <Compile Include="StartCornerMoves\StartEdgeMove1.cs" />
+    <Compile Include="ThirdLayerCrossMoves\ThirdLayerCrossMove1.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
