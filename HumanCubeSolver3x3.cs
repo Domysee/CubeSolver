@@ -141,7 +141,7 @@ namespace RubiksCubeSolver
 			}
 		}
 
-		public void SolveThirdLayerEdges(Cube cube)
+		public void SolveThirdLayerCorners(Cube cube)
 		{
 			while (!cube.IsOLLSolved())
 			{

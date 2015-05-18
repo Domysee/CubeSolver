@@ -509,6 +509,7 @@ namespace RubiksCubeSolver
 					solver.SolveTopEdges(cube);
 					solver.SolveSecondLayer(cube);
 					solver.SolveThirdLayerCross(cube);
+					solver.SolveThirdLayerCorners(cube);
 				});
 			});
 			actionB = new RelayCommand((param) =>
