@@ -34,7 +34,7 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 
 			//case where no corner is up
 			if (upCorners == 0 &&
-				cube.Left.GetCornerField(RelativeCornerPosition.TopRight) == cube.Bottom.Color)
+				cube.Left.GetCornerField(RelativeCornerPosition.BottomLeft) == cube.Bottom.Color)
 			{
 				return 1;
 			}
@@ -46,7 +46,7 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 			}
 			//case where two corners are up
 			if (upCorners == 3 &&
-				cube.Front.GetCornerField(RelativeCornerPosition.TopLeft) == cube.Bottom.Color)
+				cube.Back.GetCornerField(RelativeCornerPosition.BottomRight) == cube.Bottom.Color)
 			{
 				return 1;
 			}
