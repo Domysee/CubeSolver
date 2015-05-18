@@ -140,5 +140,34 @@ namespace RubiksCubeSolver
 				}
 			}
 		}
+
+		public void SolveThirdLayerEdges(Cube cube)
+		{
+			while (!cube.IsOLLSolved())
+			{
+				//3 is the limit because after 3 rotations of the bottom side it will be as before (4 rotations have no effect)
+				for (int i = 0; i < 3; i++)
+				{
+					//go through every possible move
+					foreach (var move in Moves.ThirdLayerCornerMoves)
+					{
+						if (move.Applicable(cube) == 1)
+						{
+							move.Apply(cube);
+						}
+					}
+
+					if (cube.IsOLLSolved())
+					{
+						break;
+					}
+					else
+					{
+						//rotate the bottom side, maybe then there will be edge pieces in the correct position
+						cube.RotateBottomCW();
+					}
+				}
+			}
+		}
 	}
 }
