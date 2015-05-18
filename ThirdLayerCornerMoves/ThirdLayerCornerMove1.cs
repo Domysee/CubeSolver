@@ -45,7 +45,7 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 				return 1;
 			}
 			//case where two corners are up
-			if (upCorners == 3 &&
+			if (upCorners == 2 &&
 				cube.Back.GetCornerField(RelativeCornerPosition.BottomRight) == cube.Bottom.Color)
 			{
 				return 1;
