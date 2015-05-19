@@ -799,6 +799,24 @@ namespace RubiksCubeSolver
 			}
 			return true;
 		}
+
+		public bool IsPLLEdgesSolved()
+		{
+			foreach (var side in new Side[] { left, back, right, front })
+			{
+				foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight })
+				{
+					if (side.GetCornerField(corner) != side.Color) return false;
+				}
+			}
+
+			foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight, RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight })
+			{
+				if (top.GetCornerField(corner) != top.Color) return false;
+			}
+
+			return true;
+		}
 		#endregion
 	}
 }
