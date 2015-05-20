@@ -18,7 +18,7 @@ namespace RubiksCubeSolver
 		public static readonly IStartCornerMove StartEdgeMoveDownMove = new StartCornerMove4();
 		public static readonly ISecondLayerEdgeMove[] SecondLayerEdgeMoves = new ISecondLayerEdgeMove[] { new SecondLayerEdgeMove1(), new SecondLayerEdgeMove2() };
 		public static readonly ISecondLayerEdgeMove SecondLayerOutMove = new SecondLayerEdgeMove3();
-		public static readonly IThirdLayerCrossMove[] ThirdLayerCrossMoves = new IThirdLayerCrossMove[] { new ThirdLayerCrossMove1(), new ThirdLayerCrossMove2() };
-		public static readonly IThirdLayerCornerMove[] ThirdLayerCornerMoves = new IThirdLayerCornerMove[] { new ThirdLayerCornerMove1() };
+		public static readonly IOLLCrossMove[] OLLCrossMoves = new IOLLCrossMove[] { new OLLCrossMove1(), new OLLCrossMove2() };
+		public static readonly IOLLCornerMove[] OLLCornerMoves = new IOLLCornerMove[] { new OLLCornerMove1() };
 	}
 }

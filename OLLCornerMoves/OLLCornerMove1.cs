@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RubiksCubeSolver.ThirdLayerCrossMoves
 {
-	public class ThirdLayerCornerMove1 : IThirdLayerCornerMove
+	public class OLLCornerMove1 : IOLLCornerMove
 	{
 		/// <summary>
 		/// represents the one single move that is needed to solve the corners

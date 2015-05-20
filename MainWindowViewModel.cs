@@ -489,7 +489,7 @@ namespace RubiksCubeSolver
 			{
 				Task.Run(() =>
 				{
-					IThirdLayerCrossMove move = new ThirdLayerCrossMove1();
+					IOLLCrossMove move = new OLLCrossMove1();
 					move.Apply(cube);
 				});
 			});

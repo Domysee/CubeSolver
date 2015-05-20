@@ -9,7 +9,7 @@ namespace RubiksCubeSolver
 	/// <summary>
 	/// represents a set of moves to solve the cross of the third layer
 	/// </summary>
-	public interface IThirdLayerCrossMove
+	public interface IOLLCrossMove
 	{
 		/// <summary>
 		/// applies the move onto the given cube

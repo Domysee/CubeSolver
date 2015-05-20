@@ -120,7 +120,7 @@ namespace RubiksCubeSolver
 				for (int i = 0; i < 3; i++)
 				{
 					//go through every possible move
-					foreach (var move in Moves.ThirdLayerCrossMoves)
+					foreach (var move in Moves.OLLCrossMoves)
 					{
 						if (move.Applicable(cube) == 1)
 						{
@@ -149,7 +149,7 @@ namespace RubiksCubeSolver
 				for (int i = 0; i < 3; i++)
 				{
 					//go through every possible move
-					foreach (var move in Moves.ThirdLayerCornerMoves)
+					foreach (var move in Moves.OLLCornerMoves)
 					{
 						if (move.Applicable(cube) == 1)
 						{
