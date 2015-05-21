@@ -112,7 +112,7 @@ namespace RubiksCubeSolver
 			}
 		}
 
-		public void SolveThirdLayerCross(Cube cube)
+		public void SolveOLLCross(Cube cube)
 		{
 			while (!cube.IsBottomCrossSolved())
 			{
@@ -141,7 +141,7 @@ namespace RubiksCubeSolver
 			}
 		}
 
-		public void SolveThirdLayerCorners(Cube cube)
+		public void SolveOLLCorners(Cube cube)
 		{
 			while (!cube.IsOLLSolved())
 			{
