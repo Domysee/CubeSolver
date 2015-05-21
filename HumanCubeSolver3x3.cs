@@ -169,5 +169,34 @@ namespace RubiksCubeSolver
 				}
 			}
 		}
+
+		public void SolvePLLCorners(Cube cube)
+		{
+			while (!cube.IsPLLEdgesSolved())
+			{
+				//3 is the limit because after 3 rotations of the bottom side it will be as before (4 rotations have no effect)
+				for (int i = 0; i < 3; i++)
+				{
+					//go through every possible move
+					foreach (var move in Moves.PLLCornerMoves)
+					{
+						if (move.Applicable(cube) == 1)
+						{
+							move.Apply(cube);
+						}
+					}
+
+					if (cube.IsPLLEdgesSolved())
+					{
+						break;
+					}
+					else
+					{
+						//rotate the bottom side, maybe then there will be corner pieces in the correct position
+						cube.RotateBottomCW();
+					}
+				}
+			}
+		}
 	}
 }
