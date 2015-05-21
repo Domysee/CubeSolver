@@ -57,12 +57,14 @@
     <Compile Include="CubeRandomizer.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HumanCubeSolver3x3.cs" />
+    <Compile Include="IPLLCornerMove.cs" />
     <Compile Include="IOLLCornerMove.cs" />
     <Compile Include="IOLLCrossMove.cs" />
     <Compile Include="ISecondLayerEdgeMove.cs" />
     <Compile Include="IStartCornerMove.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Matrix.cs" />
+    <Compile Include="PLLCornerMoves\PLLCornerMove1.cs" />
     <Compile Include="RelativeCornerPosition.cs" />
     <Compile Include="RelativeEdgePosition.cs" />
     <Compile Include="RelativeSidePosition.cs" />
