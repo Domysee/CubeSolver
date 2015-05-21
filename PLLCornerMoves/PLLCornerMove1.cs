@@ -34,7 +34,7 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 			foreach (var side in new Side[] { cube.Front, cube.Left, cube.Right })
 			{
 				//checks if there are no correctly aligned corners on all sides except back
-				if (side.GetCornerField(RelativeCornerPosition.TopLeft) == side.GetCornerField(RelativeCornerPosition.TopRight))
+				if (side.GetCornerField(RelativeCornerPosition.BottomLeft) == side.GetCornerField(RelativeCornerPosition.BottomRight))
 				{
 					return 0;
 				}
