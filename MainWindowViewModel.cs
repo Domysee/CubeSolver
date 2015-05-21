@@ -510,6 +510,7 @@ namespace RubiksCubeSolver
 					solver.SolveSecondLayer(cube);
 					solver.SolveOLLCross(cube);
 					solver.SolveOLLCorners(cube);
+					solver.SolvePLLCorners(cube);
 				});
 			});
 			actionB = new RelayCommand((param) =>

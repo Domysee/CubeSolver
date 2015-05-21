@@ -804,7 +804,7 @@ namespace RubiksCubeSolver
 		{
 			foreach (var side in new Side[] { left, back, right, front })
 			{
-				foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight })
+				foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight })
 				{
 					if (side.GetCornerField(corner) != side.Color) return false;
 				}
