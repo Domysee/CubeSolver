@@ -31,7 +31,8 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 
 		public double Applicable(Cube cube)
 		{
-			foreach (var side in new Side[] { cube.Front, cube.Left, cube.Right })
+			//front and back are switched because the cube is turned around the x-axis
+			foreach (var side in new Side[] { cube.Back, cube.Left, cube.Right })
 			{
 				//checks if there are no correctly aligned corners on all sides except back
 				if (side.GetCornerField(RelativeCornerPosition.BottomLeft) == side.GetCornerField(RelativeCornerPosition.BottomRight))
