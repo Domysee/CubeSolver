@@ -800,7 +800,7 @@ namespace RubiksCubeSolver
 			return true;
 		}
 
-		public bool IsPLLEdgesSolved()
+		public bool IsPLLCornersSolved()
 		{
 			foreach (var side in new Side[] { left, back, right, front })
 			{

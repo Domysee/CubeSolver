@@ -172,7 +172,7 @@ namespace RubiksCubeSolver
 
 		public void SolvePLLCorners(Cube cube)
 		{
-			while (!cube.IsPLLEdgesSolved())
+			while (!cube.IsPLLCornersSolved())
 			{
 				//3 is the limit because after 3 rotations of the bottom side it will be as before (4 rotations have no effect)
 				for (int i = 0; i < 3; i++)
@@ -186,7 +186,7 @@ namespace RubiksCubeSolver
 						}
 					}
 
-					if (cube.IsPLLEdgesSolved())
+					if (cube.IsPLLCornersSolved())
 					{
 						break;
 					}
