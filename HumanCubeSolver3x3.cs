@@ -217,5 +217,13 @@ namespace RubiksCubeSolver
 				}
 			}
 		}
+
+		public void SolveAfterPLL(Cube cube)
+		{
+			while (!cube.IsSolved())
+			{
+				cube.RotateBottomCCW();
+			}
+		}
 	}
 }
