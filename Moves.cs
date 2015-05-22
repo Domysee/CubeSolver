@@ -21,5 +21,6 @@ namespace RubiksCubeSolver
 		public static readonly IOLLCrossMove[] OLLCrossMoves = new IOLLCrossMove[] { new OLLCrossMove1(), new OLLCrossMove2() };
 		public static readonly IOLLCornerMove[] OLLCornerMoves = new IOLLCornerMove[] { new OLLCornerMove1() };
 		public static readonly IPLLCornerMove[] PLLCornerMoves = new IPLLCornerMove[] { new PLLCornerMove1() };
+		public static readonly IPLLEdgeMove[] PLLEdgeMoves = new IPLLEdgeMove[] { new PLLEdgeMove1() };
 	}
 }
