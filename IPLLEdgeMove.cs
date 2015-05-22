@@ -16,7 +16,7 @@ namespace RubiksCubeSolver
 		/// </summary>
 		/// <param name="cube"></param>
 		/// <param name="side"></param>
-		void Apply(Cube cube);
+		void Apply(Cube cube, RelativeCornerPosition corner);
 
 		/// <summary>
 		/// returns a applicability factor 
@@ -27,6 +27,6 @@ namespace RubiksCubeSolver
 		/// <param name="cube"></param>
 		/// <param name="side"></param>
 		/// <returns></returns>
-		double Applicable(Cube cube);
+		double Applicable(Cube cube, RelativeCornerPosition corner);
 	}
 }
