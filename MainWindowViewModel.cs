@@ -511,6 +511,8 @@ namespace RubiksCubeSolver
 					solver.SolveOLLCross(cube);
 					solver.SolveOLLCorners(cube);
 					solver.SolvePLLCorners(cube);
+					solver.SolvePLLEdges(cube);
+					solver.SolveAfterPLL(cube);
 				});
 			});
 			actionB = new RelayCommand((param) =>

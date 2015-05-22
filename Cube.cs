@@ -822,7 +822,7 @@ namespace RubiksCubeSolver
 		{
 			foreach (var side in new Side[] { left, back, right, front })
 			{
-				if (!(side.Fields[0, 0] == side.Fields[0, 1] && side.Fields[0, 1] == side.Fields[0, 2])) return false;
+				if (!(side.Fields[2, 0] == side.Fields[2, 1] && side.Fields[2, 1] == side.Fields[0, 2])) return false;
 			}
 			return true;
 		}
