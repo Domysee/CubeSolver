@@ -489,8 +489,13 @@ namespace RubiksCubeSolver
 			{
 				Task.Run(() =>
 				{
-					IOLLCrossMove move = new OLLCrossMove1();
-					move.Apply(cube);
+					var move = new PLLEdgeMove1();
+					//foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight, RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight })
+					//{
+					//	if (move.Applicable(cube, corner) == 1)
+					//		move.Apply(cube, corner);
+					//}
+					move.Apply(cube, RelativeCornerPosition.BottomLeft);
 				});
 			});
 			randomize = new RelayCommand((param) =>

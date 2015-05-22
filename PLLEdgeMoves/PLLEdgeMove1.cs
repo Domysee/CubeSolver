@@ -44,7 +44,7 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 
 			foreach (var side in new Side[] { front, left, right })
 			{
-				if (side.Fields[0, 1] == side.Color) return 0;
+				if (side.Fields[2, 1] == side.Color) return 0;
 			}
 			return 1;
 		}
