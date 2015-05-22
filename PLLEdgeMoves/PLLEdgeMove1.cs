@@ -17,21 +17,22 @@ namespace RubiksCubeSolver.ThirdLayerCrossMoves
 			Sides f, l;
 			Helper.GetFrontLeftFromCorner(corner, out f, out l);
 			Side front = cube.GetSideFromEnum(f);
-			Side left = cube.GetSideFromEnum(l);
-			Side right = left.Opposite;
+			//because the cube is rotated around the x-axis, left and right are switched
+			Side right = cube.GetSideFromEnum(l);
+			Side left = right.Opposite;
 
-			cube.RotateSideCW(front.Opposite.CubeSide);	//need to turn the opposite side because of the cube rotation
-			cube.RotateSideCW(front.Opposite.CubeSide);
+			cube.RotateSideCW(front.CubeSide);
+			cube.RotateSideCW(front.CubeSide);
 			cube.RotateBottomCW();
 			cube.RotateSideCW(left.CubeSide);
 			cube.RotateSideCCW(right.CubeSide);
-			cube.RotateSideCW(front.Opposite.CubeSide);
-			cube.RotateSideCW(front.Opposite.CubeSide);
+			cube.RotateSideCW(front.CubeSide);
+			cube.RotateSideCW(front.CubeSide);
 			cube.RotateSideCCW(left.CubeSide);
 			cube.RotateSideCW(right.CubeSide);
 			cube.RotateBottomCW();
-			cube.RotateSideCW(front.Opposite.CubeSide);
-			cube.RotateSideCW(front.Opposite.CubeSide);
+			cube.RotateSideCW(front.CubeSide);
+			cube.RotateSideCW(front.CubeSide);
 		}
 
 		public double Applicable(Cube cube, RelativeCornerPosition corner)
