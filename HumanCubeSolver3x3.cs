@@ -201,21 +201,17 @@ namespace RubiksCubeSolver
 
 		public void SolvePLLEdges(Cube cube)
 		{
-			while (!cube.IsSolved())
+			while (!cube.IsPLLSolved())
 			{
-				//3 is the limit because after 3 rotations of the bottom side it will be as before (4 rotations have no effect)
-				for (int i = 0; i < 3; i++)
+				//go through every edge
+				foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight, RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight })
 				{
-					//go through every edge
-					foreach (var corner in new RelativeCornerPosition[] { RelativeCornerPosition.TopLeft, RelativeCornerPosition.TopRight, RelativeCornerPosition.BottomLeft, RelativeCornerPosition.BottomRight })
+					//go through every possible move
+					foreach (var move in Moves.PLLEdgeMoves)
 					{
-						//go through every possible move
-						foreach (var move in Moves.PLLEdgeMoves)
+						if (move.Applicable(cube, corner) == 1)
 						{
-							if (move.Applicable(cube, corner) == 1)
-							{
-								move.Apply(cube, corner);
-							}
+							move.Apply(cube, corner);
 						}
 					}
 				}
