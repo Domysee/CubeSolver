@@ -818,6 +818,15 @@ namespace RubiksCubeSolver
 			return true;
 		}
 
+		public bool IsPLLSolved()
+		{
+			foreach (var side in new Side[] { left, back, right, front })
+			{
+				if (!(side.Fields[0, 0] == side.Fields[0, 1] && side.Fields[0, 1] == side.Fields[0, 2])) return false;
+			}
+			return true;
+		}
+
 		public bool IsSolved()
 		{
 			foreach (var side in CubeSides)
