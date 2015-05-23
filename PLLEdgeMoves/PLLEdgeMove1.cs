@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RubiksCubeSolver.ThirdLayerCrossMoves
+namespace RubiksCubeSolver.PLLEdgeMoves
 {
 	public class PLLEdgeMove1 : IPLLEdgeMove
 	{

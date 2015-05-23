@@ -6,7 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RubiksCubeSolver.SecondLayerEdgeMoves;
-using RubiksCubeSolver.ThirdLayerCrossMoves;
+using RubiksCubeSolver.OLLCrossMoves;
+using RubiksCubeSolver.OLLCornerMoves;
+using RubiksCubeSolver.PLLEdgeMoves;
+using RubiksCubeSolver.PLLCornerMoves;
 
 namespace RubiksCubeSolver
 {

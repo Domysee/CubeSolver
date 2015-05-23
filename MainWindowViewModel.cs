@@ -9,7 +9,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using RubiksCubeSolver.SecondLayerEdgeMoves;
-using RubiksCubeSolver.ThirdLayerCrossMoves;
+using RubiksCubeSolver.PLLEdgeMoves;
 
 namespace RubiksCubeSolver
 {
@@ -478,7 +478,7 @@ namespace RubiksCubeSolver
 			initializeCommands();
 		}
 
-		void cube_AfterRotation(object sender, EventArgs e)
+		void cube_AfterRotation(object sender, EventArgs e)	
 		{
 			raiseAllPropertiesChanged();
 		}
